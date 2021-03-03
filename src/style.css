@@ -55,6 +55,18 @@ background-color:white;
     font-size: 120%;
 }
 
+
+.whiteBackground{
+    position: relative;
+    top:200px;
+    background-color: white;
+    border-radius: 10px;
+    margin:auto;
+    width: 90%;
+    height: 500px;
+
+}
+
 @media only screen and (max-width: 768px) {
     .hPImgLogo{
         display: flex;
@@ -81,6 +93,5 @@ background-color:white;
         font-size: 150%;
     }
 }
-
 
 
