@@ -1,0 +1,40 @@
+*{
+    margin:0%;
+    padding: 0%;
+
+}
+body{
+    background-color: white;
+}
+.yellow{
+    background-color: #FFE607;
+    border-radius: 10px;
+    margin: 30px;
+    width: calc(100%-20px);
+    height: 1000px;
+}
+.purple{
+    position: relative;
+    top:30px;
+    background-color: #D094ee;
+    border-radius: 10px;
+    margin:auto;
+    width: 95%;
+    height: 93%;
+    display: block;   
+}
+#geekyHomePage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+@media only screen and (max-width: 768px){
+    #geekyHomePage{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        width: 100px;
+    }
+}
