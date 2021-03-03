@@ -24,6 +24,8 @@ function instructionsMove(){
     document.getElementById('instructionsPage').style.display='block';
 }
 
+//Esto es un cambio
+
 
 
 
