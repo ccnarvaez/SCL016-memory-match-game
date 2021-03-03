@@ -1,18 +1,20 @@
 *{
     margin:0%;
     padding: 0%;
+}
 
+body {
+background-color:white;
 }
-body{
-    background-color: white;
-}
+
 .yellow{
     background-color: #FFE607;
     border-radius: 10px;
     margin: 30px;
-    width: calc(100%-20px);
+    width: calc(100%-30px);
     height: 1000px;
 }
+
 .purple{
     position: relative;
     top:30px;
@@ -23,18 +25,62 @@ body{
     height: 93%;
     display: block;   
 }
-#geekyHomePage{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 500px;
+
+
+.hPImgLogo{
+    margin-left: 350px;
+    height: 250px;
+    width: 300px;
 }
-@media only screen and (max-width: 768px){
-    #geekyHomePage{
+
+.hPImgGeeky{
+    margin-left: 350px;
+    height: 300px;
+    width: 300px;
+}
+
+.homePageBtn{
+    margin-left: 600px;
+    background-color:black;
+    color:ivory;
+    font-family: arial;
+    font-size: 250%;
+}
+
+.instructiionsBtn{
+    justify-content:right;
+    background-color:black;
+    color:ivory;
+    font-family: arial;
+    font-size: 120%;
+}
+
+@media only screen and (max-width: 768px) {
+    .hPImgLogo{
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100px;
         width: 100px;
     }
+    
+    .hPImgGeeky{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        width: 50px;
+
+    }
+
+    .homePageBtn{
+        margin-left: 400px;
+        background-color:black;
+        color:ivory;
+        font-family: arial;
+        font-size: 150%;
+    }
 }
+
+
+
