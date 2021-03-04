@@ -24,7 +24,16 @@ function instructionsMove(){
     document.getElementById('instructionsPage').style.display='block';
 }
 
-//Esto es un cambio
+//3. Close instructions
+
+let closeInstructionsBtn=document.getElementById('closeInstructions');
+closeInstructionsBtn.addEventListener('click', closeInstructions);
+
+function closeInstructions(){
+    document.getElementById('instructionsPage').style.display='none';
+    document.getElementById('homePage').style.display='block';
+
+}
 
 
 

@@ -12,17 +12,17 @@ background-color:white;
     border-radius: 10px;
     margin: 30px;
     width: calc(100%-30px);
-    height: 1000px;
+    height: 100vh;
 }
 
 .purple{
     position: relative;
-    top:30px;
+    top:20px;
     background-color: #D094ee;
     border-radius: 10px;
     margin:auto;
     width: 95%;
-    height: 93%;
+    height: 93vh;
     display: block;   
 }
 
@@ -55,6 +55,18 @@ background-color:white;
     font-size: 120%;
 }
 
+
+.whiteBackground{
+    position: relative;
+    top:200px;
+    background-color: white;
+    border-radius: 10px;
+    margin:auto;
+    width: 90%;
+    height: 500px;
+
+}
+
 @media only screen and (max-width: 768px) {
     .hPImgLogo{
         display: flex;
@@ -81,6 +93,5 @@ background-color:white;
         font-size: 150%;
     }
 }
-
 
 
