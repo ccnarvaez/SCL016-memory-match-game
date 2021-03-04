@@ -14,14 +14,14 @@ function homePageMove(){
     document.getElementById('gamePage').style.display='block';
 }
 
-//2. "?"/ Instructions button and display change (from homepage to instructions page)
+//2. "?"/ Instructions button and display moving (from homepage to instructions page)
 
 let instructionsBtn = document.getElementById('instructionsBtn');
 instructionsBtn.addEventListener('click', instructionsMove);
 
 function instructionsMove(){
     document.getElementById('homePage').style.display='none';
-    document.getElementById('instructionsPage').style.display='block';
+    document.getElementById('instructionsPage').style.display='inline';
 }
 
 //3. Close instructions
@@ -35,6 +35,13 @@ function closeInstructions(){
 
 }
 
+// 4. Close game page
+let closeGameBtn= document.getElementById('closeGamePage');
+closeGameBtn.addEventListener('click', closeGame);
 
+function closeGame(){
+    document.getElementById('gamePage').style.display='none';
+    document.getElementById('homePage').style.display='block';
+}
 
 

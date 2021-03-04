@@ -7,12 +7,13 @@ body {
 background-color:white;
 }
 
+
 .yellow{
     background-color: #FFE607;
     border-radius: 10px;
     margin: 30px;
     width: calc(100%-30px);
-    height: 1000px;
+    height: 100vh;
 }
 
 .purple{
@@ -22,8 +23,14 @@ background-color:white;
     border-radius: 10px;
     margin:auto;
     width: 95%;
-    height: 93%;
+    height: 93vh;
     display: block;   
+}
+
+.geekyBottom{
+    margin-top: 0px;
+    margin-left: 0px;
+
 }
 
 
@@ -39,32 +46,58 @@ background-color:white;
     width: 300px;
 }
 
-.homePageBtn{
-    margin-left: 600px;
+.basicBtn{
+    margin-left: 450px;
     background-color:black;
     color:ivory;
     font-family: arial;
     font-size: 250%;
+    border-radius: 30px;
+    border-width: 20px;
+    border-style: solid;
+    border-color: black;
+    
 }
 
-.instructiionsBtn{
-    justify-content:right;
+.instructionsBtn{
     background-color:black;
-    color:ivory;
+    color: white;
     font-family: arial;
-    font-size: 120%;
+    font-size: 250%;
+    margin-left: 400px;
+    border-radius: 30px;
+    border-width: 20px;
+    border-style: solid;
+    border-color: black;
+    
 }
 
+.instructionsImg{
+    float:left;
+    line-height: 0px;
+}
+
+.instructionsPage{
+    font-size: 200%;
+    text-align: center;
+    text-emphasis:inherit;
+}
+
+.instructionsStyle{
+    line-height: 210px;
+    font-size: 130%;
+    text-align: left;
+    margin-left: 200px;  
+}
 
 .whiteBackground{
     position: relative;
-    top:200px;
+    top:30px;
     background-color: white;
     border-radius: 10px;
     margin:auto;
     width: 90%;
-    height: 500px;
-
+    height: cover;
 }
 
 @media only screen and (max-width: 768px) {
