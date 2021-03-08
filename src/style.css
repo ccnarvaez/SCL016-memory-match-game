@@ -1,7 +1,24 @@
+@font-face {
+    font-family: 'tuffybold';
+    src: url('tuffy_bold_700-webfont.woff2') format('woff2'),
+         url('tuffy_bold_700-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* Cards appear animation */
+@keyframes appear {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
 *{
     margin:0%;
     padding: 0%;
+    font-family: tuffybold;
 }
+
 
 body {
 background-color:white;
@@ -18,7 +35,7 @@ background-color:white;
 
 .purple{
     position: relative;
-    top:30px;
+    top:20px;
     background-color: #D094ee;
     border-radius: 10px;
     margin:auto;
@@ -37,6 +54,7 @@ background-color:white;
 .hPImgLogo img{
     width: 311px;
     height: 135px;
+    margin-top: 20px;
 }
 .hPImgLogo{
     display: flex;
@@ -50,24 +68,90 @@ background-color:white;
 .hPImgGeeky{
     display: flex;
     justify-content: center;
+    margin-top: 30px;
 }
+
 .gameBtn{
     display: flex;
     justify-content: center;
+    margin-top: 20px;
 }
+
+.gameImgLogo img{
+    width: 202px;
+    padding-left: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.cardsBackground{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #0B0B0B;
+    width: 100%;
+    height: 413px;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    animation-name: appear;
+    animation-duration: 1s;
+    background-color: #D094ee;
+    width: 76px;
+    height: 101px;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.cards img{
+    width: 49px;
+}
+
+.contentBackground{
+    position: absolute;
+    background-color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    width: 246px;
+    height: 96px;
+    border-radius: 10px;
+}
+
+.geekySpeak{
+    position: relative;
+    padding-top: 50px;
+}
+
+#text{
+    padding-left: 40px;
+}
+/*.restartBtn{
+    display: flex;
+    justify-items: center;
+}*/
+
+
+/*movil view*/
 @media only screen and (max-width: 768px) {
-    
+   
     .hPImgLogo img{
         width: 281px;
         height: 115px;
-        margin-top: 10px;
+        margin-top: 41px;
     }
     .hPImgGeeky img{
         width: 250px;
-        margin-top: 10px;
+        margin-top: 80px;
     }
     .gameBtn{
-        margin-top: 10px;
+        margin-top: 20px;
+        margin-bottom: 30px;
     }
 }
 
@@ -79,7 +163,7 @@ background-color:white;
     border-radius: 20px;
     border-width: 10px;
     border-style: solid;
-    border-color: black; 
+    border-color: black;   
 }
 
 /*Instructions page*/
