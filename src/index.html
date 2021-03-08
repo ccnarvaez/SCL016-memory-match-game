@@ -2,13 +2,106 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Memory Match</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geek's memory</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <h1>Esto es una prueba</h1>
-    <p>aprendiendo GitHub</p>
+<div id="root"></div>
+<div class="yellow">
+<!--Home page-->
+     <section id="homePage">
+     <div class="purple">
+          <div class="hPImgLogo">
+              <img src="logoModif2.png">
+          </div>
+          <div class="hPImgGeeky">
+              <img src="geekyHomePage.png">
+          </div>
+          <div class="gameBtn">
+               <button type="button" id="homePageBtn" class="basicBtn"> Jugar </button>
+          </div>
+               <button type="button" id="instructionsBtn" class="instructionsBtn"> ? </button>
+     </div><!--Este es del purple-->
+     </section>
+
+<!--Game page-->
+     <section hidden id="gamePage"> 
+        <div class="gameImgLogo";>
+            <img src="logoModif2.png">
+        </div>
+        <div class= "cardsBackground">
+            <div class="cards">
+                <img src= "Geeky.png">
+            </div>
+            <div class="cards">
+                <img src= "Geeky.png">
+            </div>
+            <div class="cards">
+                <img src= "Geeky.png">
+            </div>
+            <div class="cards">
+                <img src= "Geeky.png">
+            </div>
+                <div class="cards">
+                    <img src= "Geeky.png">
+                </div>
+                <div class="cards">
+                    <img src= "Geeky.png">
+                </div>
+                <div class="cards">
+                    <img src= "Geeky.png">
+                </div>
+                <div class="cards">
+                    <img src= "Geeky.png">
+                </div>
+            </div>    
+        <div class= "contentBackground">
+            <p id="text">Lenguaje de programación compilado just in time</p> 
+        </div>
+        <div class="geekySpeak">
+            <img src="Geeky.png" width=110px height=88px>
+        </div>
+        <div class="gametBtn">
+            <button type="button" id="closeGamePage" class="basicBtn">Reiniciar</button>
+        </div>    
+     </section>
+
+<!--Instructions page-->
+     <section hidden id="instructionsPage"> 
+      <img src="logoModif2.png" width=300px height=200px>
+   <div class="whiteBackground">
+          <div class="instructionsPage">
+              <h1> Hola soy "Geeky" y necesito tu ayuda para aprender:</h1>
+          </div>
+          <div class="instructionsImg">
+              <img src="instruccion1.png" width=200px height=200px>
+          </div>
+          <div class="instructionsStyle">
+          <h2>1. Selecciona dos cartas</h2>
+          </div>
+          <div class="instructionsImg">
+              <img src="instruccion2.png" width=200px height=200px>
+          </div>
+          <div class="instructionsStyle">
+              <h2>2. Si las cartas hacen match, anotas un punto</h2>
+          </div>
+          <div class="instructionsImg"> 
+              <img src="instruccion3.png" width=200px height=200px>
+          </div>
+          <div class="instructionsStyle">
+              <h2>3. Lee la informacion que te muestro</h2>
+          </div>
+          <button type="button" id="closeInstructions" class="basicBtn">Volver</button>
+      </div>
+      <div class="geekyBottom">
+      <img src="Geeky.png" width=300px height=300px>
+     </div>
+     </section>
+
+</div> <!--este es el del div yellow-->
+
+
     <script src="main.js" type="module"></script>
   </body>
 </html>
