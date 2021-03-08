@@ -44,7 +44,7 @@ function closeGame(){
     document.getElementById('homePage').style.display='block';
 }
 
-//Victory Page access- go back
+//Victory Page access- go back 
 
 let goToVictoryPage= document.getElementById('vPageBtn');
 goToVictoryPage.addEventListener('click', victoryPage);
