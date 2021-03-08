@@ -9,57 +9,81 @@
   <body>
 <div id="root"></div>
 <div class="yellow">
+    
 <!--Home page-->
-     <section id="homePage">
-     <div class="purple">
-          <div>
-              <img  class="hPImgLogo" src="logoModif2.png">
-          </div>
-          <div>
-              <img class="hPImgGeeky" src="geekyHomePage.png">
-          </div>
-          <button type="button" id="homePageBtn" class="basicBtn"> Jugar </button>
-          <button type="button" id="instructionsBtn" class="instructionsBtn"> ? </button>
-     </div><!--Este es del purple-->
-     </section>
+<section id="homePage">
+    <div class="purple">
+         <div class="hPImgLogo">
+             <img src="logoModif2.png">
+         </div>
+         <div class="hPImgGeeky">
+             <img src="geekyHomePage.png">
+         </div>
+         <div class=gameBtn>
+              <button type="button" id="homePageBtn" class="basicBtn"> Jugar </button>
+         </div>
+              <button type="button" id="instructionsBtn" class="instructionsBtn"> ? </button>
+    </div><!--Este es del purple-->
+    </section>
+
 
 <!--Game page-->
      <section hidden id="gamePage"> 
       <h1>Game page</h1>
       <button type="button" id="closeGamePage" class="basicBtn">Volver al inicio</button>
+      <div>
+      <button id="vPageBtn"class="basicBtn">Go </button>
+      </div>
      </section>
 
 <!--Instructions page-->
      <section hidden id="instructionsPage"> 
-      <img src="logoModif2.png" width=300px height=200px>
-   <div class="whiteBackground">
+
+     <img class="logoImg" src="logoModif2.png">
+
+     <div class="whiteBackground">
           <div class="instructionsPage">
               <h1> Hola soy "Geeky" y necesito tu ayuda para aprender:</h1>
           </div>
-          <div class="instructionsImg">
-              <img src="instruccion1.png" width=200px height=200px>
-          </div>
+          
+              <img class="instructionsImg" src="instruccion1.png">
+         
           <div class="instructionsStyle">
           <h2>1. Selecciona dos cartas</h2>
           </div>
-          <div class="instructionsImg">
-              <img src="instruccion2.png" width=200px height=200px>
-          </div>
+         
+              <img class="instructionsImg" src="instruccion2.png">
           <div class="instructionsStyle">
-              <h2>2. Si las cartas hacen match, anotas un punto</h2>
+              <h2>2. Si las cartas hacen match, anotas un punto</h2> 
           </div>
-          <div class="instructionsImg"> 
-              <img src="instruccion3.png" width=200px height=200px>
-          </div>
+              <img class="instructionsImg" src="instruccion3.png">
           <div class="instructionsStyle">
               <h2>3. Lee la informacion que te muestro</h2>
           </div>
-          <button type="button" id="closeInstructions" class="basicBtn">Volver</button>
-      </div>
-      <div class="geekyBottom">
-      <img src="Geeky.png" width=300px height=300px>
-     </div>
+         <div>
+          <button type="button" id="closeInstructions" class="instructBackBtn">Volver</button>
+        </div>
+          
+      </div>  
+      <img class="geekyBottom" src="Geeky.png">
+      
      </section>
+
+<!--Victory Page-->
+     <section hidden id="victoryPage">
+     <img class="logoImg" src="logoModif2.png">
+    
+     <div class="whiteBackground">
+     <h1 class="victoryMessage">Felicidades!!! </h1>
+     <h1 class="victoryMessage"> Has desbloqueado una carta de victoria</h1>
+     <img class="victoryGeeky" src="Carta-victoria-cut.png" height="400px"> 
+    
+  
+     <button id="VictoryGoBack" class="basicBtn"> Volver</button>
+     </div>
+
+     </section>
+
 
 </div> <!--este es el del div yellow-->
 
