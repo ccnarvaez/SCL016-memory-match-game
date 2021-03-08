@@ -44,4 +44,22 @@ function closeGame(){
     document.getElementById('homePage').style.display='block';
 }
 
+//Victory Page access- go back
 
+let goToVictoryPage= document.getElementById('vPageBtn');
+goToVictoryPage.addEventListener('click', victoryPage);
+
+function victoryPage(){
+    document.getElementById('gamePage').style.display='none';
+    document.getElementById('victoryPage').style.display='block';
+
+}
+
+let goBackGP= document.getElementById('VictoryGoBack');
+goBackGP.addEventListener('click', goBackGame)
+
+function goBackGame(){
+    document.getElementById('victoryPage').style.display='none'; 
+    document.getElementById('gamePage').style.display='block';
+      
+}
