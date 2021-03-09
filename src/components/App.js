@@ -14,13 +14,19 @@
 //   .catch(console.error);
 //
 
+import webdev from '../data/webdev/webdev.js';
+console.log(webdev.items[0]);
+let test= webdev.items[0];
 const App = () => {
-  const el = document.createElement('div');
+  const el = document.createElement('test');
 
-  el.className = 'App';
-  el.textContent = '';
-
+  el.className = 'cards';
+  el.textContent ='js';
+  console.log(el);
   return el;
+  
 };
+
+
 
 export default App;
