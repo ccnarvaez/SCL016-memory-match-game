@@ -61,57 +61,56 @@
             <p id="text">Lenguaje de programación compilado just in time</p> 
         </div>
         <div class="geekySpeak">
-            <img src="Geeky.png" width=110px height=88px>
+            <img src="Geeky.png">
         </div>
-        <div class="gametBtn">
-            <button type="button" id="closeGamePage" class="basicBtn">Reiniciar</button>
-        </div>    
+        <div class="gameBtn">
+            <button type="button" id="closeGamePage" class="backBtn">Reiniciar</button>
+            <button id="vPageBtn"class="backBtn">Go </button>
+        </div>   
      </section>
 
 <!--Instructions page-->
      <section hidden id="instructionsPage"> 
-
-     <img class="logoImg" src="logoModif2.png">
-
-     <div class="whiteBackground">
-          <div class="instructionsPage">
-              <h1> Hola soy "Geeky" y necesito tu ayuda para aprender:</h1>
-          </div>
-          
-              <img class="instructionsImg" src="instruccion1.png">
-         
-          <div class="instructionsStyle">
-          <h2>1. Selecciona dos cartas</h2>
-          </div>
-         
-              <img class="instructionsImg" src="instruccion2.png">
-          <div class="instructionsStyle">
-              <h2>2. Si las cartas hacen match, anotas un punto</h2> 
-          </div>
-              <img class="instructionsImg" src="instruccion3.png">
-          <div class="instructionsStyle">
-              <h2>3. Lee la informacion que te muestro</h2>
-          </div>
-         <div>
-          <button type="button" id="closeInstructions" class="instructBackBtn">Volver</button>
+        <div class="gameImgLogo";>
+            <img src="logoModif2.png">
         </div>
-          
-      </div>  
-      <img class="geekyBottom" src="Geeky.png">
-      
-     </section>
+     <div class="whiteBackground">
+              <h1>Hola soy "Geeky" y necesito tu ayuda para aprender:</h1>
+        <article class="instructionsStyle">
+            <img src="instruccion1.png">
+            <h2>1. Selecciona dos cartas</h2> 
+        </article>
+        <article class="instructionsStyle">
+            <img src="instruccion2.png">
+            <h2>2. Si las cartas hacen match, anotas un punto</h2> 
+        </article>
+        <article class="instructionsStyle">
+            <img src="instruccion3.png">
+            <h2>3. Lee la informacion que te muestro</h2> 
+        </article>
+         <div class="gameBtn">
+            <button type="button" id="closeInstructions" class="backBtn">Volver</button>
+         </div> 
+            <img class="geekyBottom" src="Geeky.png">
+    </section>
 
 <!--Victory Page-->
      <section hidden id="victoryPage">
-     <img class="logoImg" src="logoModif2.png">
-    
+        <div class="gameImgLogo";>
+            <img src="logoModif2.png">
+        </div>
      <div class="whiteBackground">
-     <h1 class="victoryMessage">Felicidades!!! </h1>
-     <h1 class="victoryMessage"> Has desbloqueado una carta de victoria</h1>
-     <img class="victoryGeeky" src="Carta-victoria-cut.png" height="400px"> 
-    
-  
-     <button id="VictoryGoBack" class="basicBtn"> Volver</button>
+            <h1>Felicidades!!!</h1>
+            <h1> Has desbloqueado una carta de victoria</h1>   
+            <div class="gameBtn">
+                <img class="victoryGeeky" src="Carta-victoria-cut.png">
+            </div>            
+            <div class="gameBtn">
+                <button id="VictoryGoBack" class="backBtn"> Volver</button>
+            </div>
+        </div>
+        </div>
+            
      </div>
 
      </section>
