@@ -9,10 +9,19 @@ document.getElementById('root').appendChild(App());
 let homePageBtn = document.getElementById('homePageBtn');
 homePageBtn.addEventListener('click', homePageMove);
 
+
 function homePageMove(){
     document.getElementById('homePage').style.display='none';
     document.getElementById('gamePage').style.display='block';
 }
+document.getElementById("1").addEventListener("click", Prueba);
+function Prueba() {
+    let imageCard = document.getElementById("11");
+    imageCard.src = "https://simpleicons.org/icons/javascript.svg";
+    document.getElementById("1").style.background = "#F7DF1E";
+    console.log("carta 1");
+}
+
 
 //2. "?"/ Instructions button and display moving (from homepage to instructions page)
 
@@ -44,7 +53,7 @@ function closeGame(){
     document.getElementById('homePage').style.display='block';
 }
 
-//Victory Page access- go back
+//Victory Page access- go back 
 
 let goToVictoryPage= document.getElementById('vPageBtn');
 goToVictoryPage.addEventListener('click', victoryPage);
