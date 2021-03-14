@@ -190,3 +190,5 @@ Se desarrollaron dos modelos, para luego someter a testeo:
 En base a las observaciones recibidas, se realizaron  modificaciones, resultando el diseño, en base al cual se programaría la app:
 
 <img src="Test.png" width= "300px" height="200px">
+
+*** No considerar esta linea
