@@ -46,25 +46,43 @@ const App = () => {
 };
 
 // Fisher-yates algoritm
+// 1. Array of objects which contents elements called from webdev components archive
+let inputArray = Array.from(webdev.items); // This is an array which elements are objects
+ 
+// 2. Choosing random elements from inputObject: random sort method
 
-/*** Test "Array.from method": I need to create an array to work with 
- (I got an object with information and i need to call that information 
- to start fisher-yates algoritm).
- I will try "Array.from method". It defines a new array from an iterable object*/
+let sortedArray= inputArray.sort((a,b)=> 0.5-Math.random());
 
-let inputArray = Array.from(webdev.items);
-
-// ***Agregar metodo para tomar elementos del array al azar***
-inputArray.splice(4,6);// Our game just need 8 cards *** revisar funcionalidad para sustituir
-console.log(inputArray);
+// 3. input array cut (we just need 4 components)
+sortedArray.splice(4,6);
+let spliceCounted= sortedArray.length-1;// this was done to solve my "out of memory" problem
 
 
-let newArray =inputArray;
-newArray[4]=inputArray[0];
-newArray[5]=inputArray[1];
-newArray[6]=inputArray[2];
-newArray[7]=inputArray[3];
+//4. Full array with double elements. We need that to getting match cards
+for (let j=0; j<=spliceCounted; j++){ 
+  sortedArray[j+4]=sortedArray[j];
+}
 
-console.log(newArray);
+//5. Now, we are going to present sortedArray elements in random order: Fisher Yates  Algoritm
+
+
+let fullArrayCounted= sortedArray.length;// this was done to solve my "out of memory" problem
+   for (let k=0; k<fullArrayCounted; k++){
+
+     // a. I got object in the position k
+     let sortedArrayItem=sortedArray[k];
+
+     // b. Now, determinate a random index
+     let randomIndex=Math.floor(Math.random()*fullArrayCounted);
+
+     // c. here we determinate item in the random position and replace original item in "k" position
+     sortedArray[k]= sortedArray[randomIndex];
+     sortedArray[randomIndex]=sortedArrayItem;
+     
+  
+}
+console.log(sortedArray);
+console.log(sortedArray[0].id);
+
 
 export default App;
