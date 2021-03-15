@@ -2,6 +2,8 @@ import App from './components/App.js';
 
 document.getElementById('root').appendChild(App());
 
+
+
 // App structure: displays and buttons
    
 //1. "Jugar"/ play button and display change (from homepage to game page)
@@ -63,3 +65,6 @@ function goBackGame(){
     document.getElementById('gamePage').style.display='block';
       
 }
+
+
+
