@@ -11,10 +11,39 @@ document.getElementById('root').appendChild(App());
 let homePageBtn = document.getElementById('homePageBtn');
 homePageBtn.addEventListener('click', homePageMove);
 
+
 function homePageMove(){
     document.getElementById('homePage').style.display='none';
     document.getElementById('gamePage').style.display='block';
 }
+document.getElementById("0").addEventListener("click", Prueba);
+function Prueba() {
+    let imageCard = document.getElementById("11");
+    imageCard.src = "https://simpleicons.org/icons/javascript.svg";
+    document.getElementById("1").style.background = "#F7DF1E";
+    console.log();
+}
+//const cardSelect = document.getElementsByClassName("card");
+const cardSelect = document.querySelectorAll(".card");
+console.log(cardSelect[0]);
+//flip cards
+ let card1 = document.getElementById("1");
+  card1.addEventListener( "click", function() {
+  card1.classList.toggle("is-flipped");
+  //let devValue2=document.getElementById("22").firstChild.nodeValue;
+  //console.log(devValue2);
+  //if (devValue2 == "back") {
+    //setTimeout(() => { card.classList.toggle("is-flipped"); }, 1500);
+    
+    //console.log("detecta");
+  //}
+ })
+  let card2 = document.getElementById("2");
+  card2.addEventListener( "click", function() {
+  card2.classList.toggle("is-flipped");
+ })
+//}
+
 
 //2. "?"/ Instructions button and display moving (from homepage to instructions page)
 

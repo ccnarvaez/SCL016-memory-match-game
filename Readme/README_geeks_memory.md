@@ -191,4 +191,43 @@ En base a las observaciones recibidas, se realizaron  modificaciones, resultando
 
 <img src="Test.png" width= "300px" height="200px">
 
-*** No considerar esta linea
+## 3. DISEÑO DE DISPLAYS: HTML Y CSS
+
+### 3.1 HTML
+En el archivo Html se estructuraron en secciones todas las vistas del usuario con sus respectivas id que permite a traves de JavaScript mostrar u ocultar cada una, estas son: Home Page, Game Page, Instructions Page y Victory Page.
+
+Algunas de las clases utilizadas se repetian en las distintas páginas, lo que fue importante de detectar, ya que, en un inicio nos habiamos dividido la realización de las páginas en el equipo y luego nos dimos cuenta que eran componentes los que debiamos crear para reutilizarlos en las distintas páginas. De tal manera que unificamos para hacer más eficiente el codigo y darle mejor experiencia al usuario.
+
+### 3.2 CSS
+En la creación del CSS teniamos la tarea de crear una aplicación responsiva, esto es, que se pueda ver de buena manera en distintos tamaños de pantallas.
+
+Para realizarlo, utilizamos en el Html la etiqueta viewport que nos permite definir el área para renderizar las páginas y desde el CSS con una consulta @media poder identificar desde que dispositivo esta viendo la página el usuario para brindarle una óptima experiencia y ajuste a las resoluciones de su dispositivo.
+
+#### <b>Definimos tres tipos de pantallas:</b>
+
+- Movil: @media only screen and (max-width: 430px) <b>Asignada por defecto.</b>
+- Tablet: @media only screen and (min-width: 431px)
+- Desktop: @media only screen and (min-width: 769px)
+
+Así, en la medida que detecta el tamaño de las pantallas se despliegan propiedades de CSS distintas que dan mejor aspecto a la aplicación. 
+
+#### 3.2.1 Efectos de las cartas
+Un elemento considerado para darle más movimiento y aspecto lúdico al Memory Match fue el diseño de animaciones y transiciones.
+
+La siguiente animación permite que las cartas aparezcan en 1 segundo despues de cargar la página, llamando la animación desde la clase cards.
+
+    @keyframes appear {
+    from {opacity: 0;}
+    to {opacity: 1;}
+    } 
+
+    .cards{
+    ..
+    animation-name: appear;
+    animation-duration: 1s;
+    ..}
+
+Para poder voltear las cartas se hizo una adaptación del efecto flip, documentado aquí:  https://codepen.io/desandro/pen/LmWoWe
+
+Esto utiliza funciones 3D (transition: transform 1s;
+  transform-style: preserve-3d;) y rotación en el eje Y (transform: rotateY(180deg)) para generar el efecto deseado. Lo que nos permite que cuando el usuario haga click se voltee la carta que desea y posteriormente pasa a un ciclo condicional en donde, si las cartas coinciden se quedan volteadas, sino, se ocultan nuevamente para que el usuario siga descubriendolas.
