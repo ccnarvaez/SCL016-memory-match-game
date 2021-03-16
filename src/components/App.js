@@ -78,11 +78,17 @@ let fullArrayCounted= sortedArray.length;// this was done to solve my "out of me
      // c. here we determinate item in the random position and replace original item in "k" position
      sortedArray[k]= sortedArray[randomIndex];
      sortedArray[randomIndex]=sortedArrayItem;
-     
-  
-}
+    }
+    // call back component from sortedArray 
+    let callBackSorted=document.getElementsByClassName("card_face card_face--back");
+    for (let c=0; c <= 3; c++){
+      console.log(callBackSorted[c]);
+      callBackSorted[c].style.backgroundColor = sortedArray[c].bgColor;
+      let imageCard = callBackSorted[c].firstElementChild;
+      imageCard .src = sortedArray[c].image;
+
+    }
+    
 console.log(sortedArray);
-console.log(sortedArray[0].id);
-
-
+console.log(sortedArray[0].bgColor);
 export default App;
