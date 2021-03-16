@@ -23,7 +23,16 @@ const App = () => {
   const el = document.createElement('test');
 
   el.className = 'cards';
-  el.textContent ='js';
+  el.textContent =sortedArray[0].id;
+ 
+  /*
+  let imageCard = document.getElementById("11");
+    imageCard.src = "https://simpleicons.org/icons/javascript.svg";
+    document.getElementById("0").style.background = "#F7DF1E";
+    console.log();
+
+  imageCard.src = sortedArray[0].image;
+  */
   console.log(el);
   return el;
 };
@@ -50,8 +59,9 @@ for (let j=0; j<=spliceCounted; j++){
 //5. Now, we are going to present sortedArray elements in random order: Fisher Yates  Algoritm
 
 
-let fullArrayCounted= sortedArray.length;// this was done to solve my "out of memory" problem
-    for (let k=0; k<fullArrayCounted; k++){
+const fisherYates=()=>{
+  let fullArrayCounted= sortedArray.length;// this was done to solve my "out of memory" problem
+  for (let k=0; k<fullArrayCounted; k++){
 
       // a. I got object in the position k
       let sortedArrayItem=sortedArray[k];
@@ -63,9 +73,10 @@ let fullArrayCounted= sortedArray.length;// this was done to solve my "out of me
       sortedArray[k]= sortedArray[randomIndex];
       sortedArray[randomIndex]=sortedArrayItem;
       
-   
+   return sortedArray
+  }
 }
 console.log(sortedArray);
-console.log(sortedArray[0].id);
+
 
 export default App;

@@ -8,6 +8,7 @@
 }
 
 /* Cards appear animation */
+
 @keyframes appear {
     from {opacity: 0;}
     to {opacity: 1;}
@@ -122,6 +123,7 @@ background-color:white;
 .cards img{
     width: 59px;
 }
+
 /*Flip instructions*/
 .scene {
     display: flex;

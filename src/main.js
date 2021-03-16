@@ -4,6 +4,7 @@ document.getElementById('root').appendChild(App());
 
 
 
+
 // App structure: displays and buttons
    
 //1. "Jugar"/ play button and display change (from homepage to game page)
@@ -16,6 +17,7 @@ function homePageMove(){
     document.getElementById('homePage').style.display='none';
     document.getElementById('gamePage').style.display='block';
 }
+
 document.getElementById("0").addEventListener("click", Prueba);
 function Prueba() {
     let imageCard = document.getElementById("11");
