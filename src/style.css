@@ -8,7 +8,6 @@
 }
 
 /* Cards appear animation */
-
 @keyframes appear {
     from {opacity: 0;}
     to {opacity: 1;}
@@ -20,7 +19,7 @@
     font-family: tuffybold;
 }
 
-
+/*General statements*/
 body {
 background-color:white;
 }
@@ -45,6 +44,7 @@ background-color:white;
     display: block;   
 }
 
+/*homePage*/
 .geekyBottom{
     margin-top: 0px;
     margin-left: 0px;
@@ -123,8 +123,8 @@ background-color:white;
 .cards img{
     width: 59px;
 }
-
 /*Flip instructions*/
+/*3D container to move cards*/
 .scene {
     display: flex;
     justify-content: center;
@@ -168,10 +168,16 @@ background-color:white;
   }
   
   .card_face--back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: #FFE607;
     border: 1px solid black;
     border-radius: 15px;
     transform: rotateY( 180deg );
+  }
+  .card_face--back img{
+    width: 69px;
   }
 
   .card.is-flipped {

@@ -14,69 +14,58 @@
 //   .catch(console.error);
 //
 
-//Card components
+
+//Llamar componentes de cartas
 
 import webdev from '../data/webdev/webdev.js';
-//console.log(webdev.items[0]);
-//let test= webdev.items[0];
-const App = () => {
-  const el = document.createElement('test');
 
-  el.className = 'cards';
-  el.textContent =sortedArray[0].id;
+    // Fisher-yates algoritm
+    // 1. Array of objects which contents elements called from webdev components archive
+    let inputArray = Array.from(webdev.items); 
+    
+    // 2. Choosing random elements from inputObject: random sort method
+    let sortedArray= inputArray.sort((a,b)=> 0.5-Math.random());
+
+    // 3. input array cut (we just need 4 components)
+    sortedArray.splice(4,6);
+    let spliceCounted= sortedArray.length-1;
+
+
+    //4. Full array with double elements. We need that to getting match cards
+    for (let j=0; j<=spliceCounted; j++){ 
+      sortedArray[j+4]=sortedArray[j];
+    }
+
+    //5. Now, we are going to present sortedArray elements in random order: Fisher Yates  Algoritm
+    function fisherRestart(){
+        let fullArrayCounted= sortedArray.length;  
+        for (let k=0; k<fullArrayCounted; k++){
+        let sortedArrayItem=sortedArray[k];
+        let randomIndex=Math.floor(Math.random()*fullArrayCounted);
+        sortedArray[k]= sortedArray[randomIndex];
+        sortedArray[randomIndex]=sortedArrayItem;
+        }
+    
+      console.log(sortedArray);
+    
+    
+  
+    //6. call back component from sortedArray 
+    let callBackSorted=document.getElementsByClassName("card_face card_face--back");
+    
+    for (let c=0; c <= 7; c++){
+      callBackSorted[c].style.backgroundColor = sortedArray[c].bgColor;
+      let cardsBackArray = callBackSorted[c].childNodes;
+      let childImage= cardsBackArray[0];
+      childImage.src = sortedArray[c].image;
+
+      console.log(cardsBackArray);
+      let idName= cardsBackArray[1].firstChild;
+      idName.textContent = sortedArray[c].id;
+      console.log(idName);
+    }
+  
+  };
+  
  
-  /*
-  let imageCard = document.getElementById("11");
-    imageCard.src = "https://simpleicons.org/icons/javascript.svg";
-    document.getElementById("0").style.background = "#F7DF1E";
-    console.log();
-
-  imageCard.src = sortedArray[0].image;
-  */
-  console.log(el);
-  return el;
-};
-
-// Fisher-yates algoritm
-
-// 1. Array of objects which contents elements called from webdev components archive
- let inputArray = Array.from(webdev.items); // This is an array which elements are objects
- 
- // 2. Choosing random elements from inputObject: random sort method
-
- let sortedArray= inputArray.sort((a,b)=> 0.5-Math.random());
-
-// 3. input array cut (we just need 4 components)
- sortedArray.splice(4,6);
- let spliceCounted= sortedArray.length-1;// this was done to solve my "out of memory" problem
-
-
-//4. Full array with double elements. We need that to getting match cards
-for (let j=0; j<=spliceCounted; j++){ 
-   sortedArray[j+4]=sortedArray[j];
-}
-
-//5. Now, we are going to present sortedArray elements in random order: Fisher Yates  Algoritm
-
-
-const fisherYates=()=>{
-  let fullArrayCounted= sortedArray.length;// this was done to solve my "out of memory" problem
-  for (let k=0; k<fullArrayCounted; k++){
-
-      // a. I got object in the position k
-      let sortedArrayItem=sortedArray[k];
-
-      // b. Now, determinate a random index
-      let randomIndex=Math.floor(Math.random()*fullArrayCounted);
-
-      // c. here we determinate item in the random position and replace original item in "k" position
-      sortedArray[k]= sortedArray[randomIndex];
-      sortedArray[randomIndex]=sortedArrayItem;
-      
-   return sortedArray
-  }
-}
-console.log(sortedArray);
-
-
-export default App;
+export default fisherRestart;
