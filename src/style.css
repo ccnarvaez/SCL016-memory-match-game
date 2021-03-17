@@ -19,7 +19,7 @@
     font-family: tuffybold;
 }
 
-
+/*General statements*/
 body {
 background-color:white;
 }
@@ -44,6 +44,7 @@ background-color:white;
     display: block;   
 }
 
+/*homePage*/
 .geekyBottom{
     margin-top: 0px;
     margin-left: 0px;

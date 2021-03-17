@@ -14,40 +14,46 @@
 //   .catch(console.error);
 //
 
+
+//Llamar componentes de cartas
+
 import webdev from '../data/webdev/webdev.js';
-//console.log(webdev.items[0]);
-//let test= webdev.items[0];
-const App = () => {
-  //const el = document.createElement('test');
 
-  //el.className = 'cards';
-  //el.textContent ='js';
-  //console.log(el);
-  //return el;
-  
+    // Fisher-yates algoritm
+    // 1. Array of objects which contents elements called from webdev components archive
+    let inputArray = Array.from(webdev.items); 
+    
+    // 2. Choosing random elements from inputObject: random sort method
+    let sortedArray= inputArray.sort((a,b)=> 0.5-Math.random());
+
+    // 3. input array cut (we just need 4 components)
+    sortedArray.splice(4,6);
+    let spliceCounted= sortedArray.length-1;
 
 
-// Fisher-yates algoritm
-let inputArray = Array.from(webdev.items); 
-let sortedArray= inputArray.sort((a,b)=> 0.5-Math.random());
-sortedArray.splice(4,6);
-let spliceCounted= sortedArray.length-1;
-for (let j=0; j<=spliceCounted; j++){ 
-  sortedArray[j+4]=sortedArray[j];
-}
-let fullArrayCounted= sortedArray.length;
-   for (let k=0; k<fullArrayCounted; k++){
-     let sortedArrayItem=sortedArray[k];
-     let randomIndex=Math.floor(Math.random()*fullArrayCounted);
-     sortedArray[k]= sortedArray[randomIndex];
-     sortedArray[randomIndex]=sortedArrayItem;
+    //4. Full array with double elements. We need that to getting match cards
+    for (let j=0; j<=spliceCounted; j++){ 
+      sortedArray[j+4]=sortedArray[j];
     }
-    console.log(sortedArray);
-  // Fisher-yates ends
 
-  //  Call elements to cards
+    //5. Now, we are going to present sortedArray elements in random order: Fisher Yates  Algoritm
+    function fisherRestart(){
+        let fullArrayCounted= sortedArray.length;  
+        for (let k=0; k<fullArrayCounted; k++){
+        let sortedArrayItem=sortedArray[k];
+        let randomIndex=Math.floor(Math.random()*fullArrayCounted);
+        sortedArray[k]= sortedArray[randomIndex];
+        sortedArray[randomIndex]=sortedArrayItem;
+        }
+    
+      console.log(sortedArray);
+    
+    
+  
+    //6. call back component from sortedArray 
     let callBackSorted=document.getElementsByClassName("card_face card_face--back");
-    for (let c=0; c <= 3; c++){
+    
+    for (let c=0; c <= 7; c++){
       callBackSorted[c].style.backgroundColor = sortedArray[c].bgColor;
       let cardsBackArray = callBackSorted[c].childNodes;
       let childImage= cardsBackArray[0];
@@ -58,7 +64,8 @@ let fullArrayCounted= sortedArray.length;
       idName.textContent = sortedArray[c].id;
       console.log(idName);
     }
-  // end Call elements to cards  
-  return sortedArray;
-};
-export default App;
+  
+  };
+  
+ 
+export default fisherRestart;

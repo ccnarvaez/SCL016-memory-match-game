@@ -86,6 +86,18 @@ A fin de caracterizar la app, se diseñó un logo con el nombre, y se seleccion�
 #### 2.3.1 Historias de usuario
 A fin de generar un diseño que estuviera adaptado a las necesidades del usuario, se trabajó en base a "historias de usuario", las cuales, además de ayudarnos a definir la app por etapas, también nos permitieron ocupar la "perspectiva del usuario", pensando en la aplicación de una manera más funcional que práctica.
 
+##### Primera historia de usuario: "Necesito entender cómo funciona el juego"
+      * Solución: Crear display con instrucciones y un botón que permita acceder a él
+      * Criterios mínimos de aceptación: Que al hacer click en el botón se muestre cuadro emergente con texto de instrucciones.
+       * Product Backlog: 
+            a. Display página de inicio
+            b. colocar botón "?" en la página de inicio.
+            c. dar funcionalidad al botón para ir desde pagina de inicio hasta las página de instrucciones
+            d. Crear display de instrucciones
+            e. Escribir instrucciones
+            f. Añadir estilo de acuerdo al diseño de figma
+            g. Diseñar en forma responsiva
+
 ### Primera historia de usuario: "Necesito entender cómo funciona el juego"
       * Solución: Crear display con instrucciones y un botón que permita acceder a él
       * Criterios mínimos de aceptación: Que al hacer click en el botón se muestre cuadro emergente con texto de instrucciones.
