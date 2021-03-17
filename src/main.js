@@ -1,6 +1,6 @@
 import App from './components/App.js';
 
-document.getElementById('root').appendChild(App());
+//document.getElementById('root').appendChild(App());
 
 // App structure: displays and buttons
    
@@ -19,11 +19,15 @@ function homePageMove(){
 const cardSelect = document.querySelectorAll(".card");
 console.log(cardSelect);
 //flip cards
- //let card1 = document.getElementById("1");
-    
-  let card1 = cardSelect[0];
-  card1.addEventListener( "click", function() {
-  card1.classList.toggle("is-flipped");
+for (let i=0; i<=3; i++){ 
+    let Allcards = cardSelect[i];
+    Allcards.addEventListener( "click", function() {
+    Allcards.classList.toggle("is-flipped");})
+}
+
+  //let card1 = cardSelect[0];
+  //card1.addEventListener( "click", function() {
+  //card1.classList.toggle("is-flipped");
   //let devValue2=document.getElementById("22").firstChild.nodeValue;
   //console.log(devValue2);
   //if (devValue2 == "back") {
@@ -31,11 +35,11 @@ console.log(cardSelect);
     
     //console.log("detecta");
   //}
- })
-  let card2 = document.getElementById("2");
-  card2.addEventListener( "click", function() {
-  card2.classList.toggle("is-flipped");
- })
+ //})
+ // let card2 = document.getElementById("2");
+  //card2.addEventListener( "click", function() {
+  //card2.classList.toggle("is-flipped");
+ //})
 //}
 
 //2. "?"/ Instructions button and display moving (from homepage to instructions page)
