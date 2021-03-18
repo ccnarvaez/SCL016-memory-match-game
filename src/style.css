@@ -89,6 +89,13 @@ background-color:white;
 }
 
 /*Game page*/
+.tried{
+    font-family: tuffybold;
+    font-size: 150%;
+    text-align:center;
+    line-height: 150px;
+    
+}
 .gameImgLogo img{
     width: 200px;
     padding-left: 10px;
@@ -182,6 +189,10 @@ background-color:white;
 
   .card.is-flipped {
     transform: rotateY(180deg);
+  }
+
+  .card.no-flipped {
+    transform: rotateY(0deg); 
   }
 /*end flip instructions*/  
 

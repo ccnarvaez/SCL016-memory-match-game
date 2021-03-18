@@ -30,7 +30,6 @@ import webdev from '../data/webdev/webdev.js';
     sortedArray.splice(4,6);
     let spliceCounted= sortedArray.length-1;
 
-
     //4. Full array with double elements. We need that to getting match cards
     for (let j=0; j<=spliceCounted; j++){ 
       sortedArray[j+4]=sortedArray[j];
@@ -47,7 +46,6 @@ import webdev from '../data/webdev/webdev.js';
         }
     
       console.log(sortedArray);
-    
     
   
     //6. call back component from sortedArray 
