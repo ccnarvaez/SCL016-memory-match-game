@@ -18,10 +18,11 @@
 //Llamar componentes de cartas
 
 import webdev from '../data/webdev/webdev.js';
-
+import webDev_Definition from '../data/webdev/webDev_Definition.js';
     // Fisher-yates algoritm
     // 1. Array of objects which contents elements called from webdev components archive
     let inputArray = Array.from(webdev.items); 
+    
     
     // 2. Choosing random elements from inputObject: random sort method
     let sortedArray= inputArray.sort((a,b)=> 0.5-Math.random());
@@ -50,10 +51,12 @@ import webdev from '../data/webdev/webdev.js';
   
     //6. call back component from sortedArray 
     let callBackSorted=document.getElementsByClassName("card_face card_face--back");
-    
+
+  
     for (let c=0; c <= 7; c++){
       callBackSorted[c].style.backgroundColor = sortedArray[c].bgColor;
       let cardsBackArray = callBackSorted[c].childNodes;
+
       let childImage= cardsBackArray[0];
       childImage.src = sortedArray[c].image;
 
@@ -61,9 +64,14 @@ import webdev from '../data/webdev/webdev.js';
       let idName= cardsBackArray[1].firstChild;
       idName.textContent = sortedArray[c].id;
       console.log(idName);
+
     }
-  
+
   };
+ 
+
+
+            
   
  
 export default fisherRestart;

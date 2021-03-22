@@ -89,13 +89,6 @@ background-color:white;
 }
 
 /*Game page*/
-.tried{
-    font-family: tuffybold;
-    font-size: 150%;
-    text-align:center;
-    line-height: 150px;
-    
-}
 .gameImgLogo img{
     width: 200px;
     padding-left: 10px;
@@ -113,23 +106,6 @@ background-color:white;
     height: 260px;
 }
 
-.cards{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 5px;
-    animation-name: appear;
-    animation-duration: 1s;
-    background-color: #D094ee;
-    width: 126px;
-    height: 151px;
-    border: 1px solid black;
-    border-radius: 15px;
-}
-
-.cards img{
-    width: 59px;
-}
 /*Flip instructions*/
 /*3D container to move cards*/
 .scene {
@@ -184,15 +160,17 @@ background-color:white;
     transform: rotateY( 180deg );
   }
   .card_face--back img{
+    position: relative;  
     width: 69px;
+  }
+
+  .card_face--back h1{
+      position: relative;
+      top: 50px;
   }
 
   .card.is-flipped {
     transform: rotateY(180deg);
-  }
-
-  .card.no-flipped {
-    transform: rotateY(0deg); 
   }
 /*end flip instructions*/  
 
@@ -220,6 +198,15 @@ background-color:white;
     padding-left: 40px;
 }
 
+.tried{
+    font-family: tuffybold;
+    font-size: 150%;
+    text-align:center;
+    line-height: 150px;
+    
+}
+
+
 .backBtn{
     background-color:black;
     color:ivory;
@@ -229,6 +216,18 @@ background-color:white;
     border-width: 20px;
     border-style: solid;
     border-color: black;  
+}
+
+.closeGamePage {
+    background-color:black;
+    color:ivory;
+    font-family: arial;
+    font-size: 100%;
+    border-radius: 30px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black;  
+    margin-left: 700px;
 }
 
 /*Victory Page*/
@@ -321,23 +320,37 @@ h1{
         height: 413px;
     }
 
-    .cards{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 5px;
-        animation-name: appear;
-        animation-duration: 1s;
-        background-color: #D094ee;
-        width: 76px;
-        height: 101px;
-        border: 1px solid black;
-        border-radius: 15px;
-    }
+    /*Flip instructions*/
+/*3D container to move cards*/
+.scene {
+    width: 76px;
+    height: 101px;
+  }
+  
+  .card_face--front img{
+    width: 49px;
+  }
+  
+  .card_face--back img{ 
+    width: 59px;
+  }
 
-    .cards img{
-        width: 49px;
-    }
+  .card_face--back h1{
+    display: none;
+  }
+/*end flip instructions*/  
+.closeGamePage {
+    position:relative;
+    background-color:black;
+    color:ivory;
+    font-family: arial;
+    font-size: 70%;
+    border-radius: 30px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black;  
+    margin-left: 300px;
+}
 
     .contentBackground{
         position: absolute;
