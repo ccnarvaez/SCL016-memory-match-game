@@ -14,44 +14,36 @@
 //   .catch(console.error);
 //
 
-
 //Llamar componentes de cartas
 
 import webdev from '../data/webdev/webdev.js';
 import webDev_Definition from '../data/webdev/webDev_Definition.js';
-    // Fisher-yates algoritm
-    // 1. Array of objects which contents elements called from webdev components archive
-    let inputArray = Array.from(webdev.items); 
-    
-    
-    // 2. Choosing random elements from inputObject: random sort method
-    let sortedArray= inputArray.sort((a,b)=> 0.5-Math.random());
 
-    // 3. input array cut (we just need 4 components)
-    sortedArray.splice(4,6);
-    let spliceCounted= sortedArray.length-1;
 
-    //4. Full array with double elements. We need that to getting match cards
+// FISHER YATES ALGORITM
+ let inputArray = Array.from(webdev.items); 
+ let sortedArray= inputArray.sort((a,b)=> 0.5-Math.random());
+ sortedArray.splice(4,6);
+ let spliceCounted= sortedArray.length-1;
+
     for (let j=0; j<=spliceCounted; j++){ 
       sortedArray[j+4]=sortedArray[j];
     }
 
-    //5. Now, we are going to present sortedArray elements in random order: Fisher Yates  Algoritm
-    function fisherRestart(){
+  function fisherRestart(){
         let fullArrayCounted= sortedArray.length;  
         for (let k=0; k<fullArrayCounted; k++){
-        let sortedArrayItem=sortedArray[k];
-        let randomIndex=Math.floor(Math.random()*fullArrayCounted);
-        sortedArray[k]= sortedArray[randomIndex];
-        sortedArray[randomIndex]=sortedArrayItem;
+          let sortedArrayItem=sortedArray[k];
+          let randomIndex=Math.floor(Math.random()*fullArrayCounted);
+          sortedArray[k]= sortedArray[randomIndex];
+          sortedArray[randomIndex]=sortedArrayItem;
         }
     
       console.log(sortedArray);
     
   
-    //6. call back component from sortedArray 
-    let callBackSorted=document.getElementsByClassName("card_face card_face--back");
-
+      //CALL BACK COMPONENT FROM SORTED ARRAY
+      let callBackSorted=document.getElementsByClassName("card_face card_face--back");
   
     for (let c=0; c <= 7; c++){
       callBackSorted[c].style.backgroundColor = sortedArray[c].bgColor;
@@ -66,7 +58,7 @@ import webDev_Definition from '../data/webdev/webDev_Definition.js';
       console.log(idName);
 
     }
-    //turn the cards for restart
+    //TURN CARDS
     const flipIt = document.querySelectorAll(".is-flipped");
     console.log(flipIt);
     console.log(flipIt.length);
@@ -78,5 +70,111 @@ import webDev_Definition from '../data/webdev/webDev_Definition.js';
         flipIt[x].classList.add("card");
        }
     }
+
   }; 
+
+  
+  //flip cards
+      const cardSelect = document.querySelectorAll('.card');
+      let game1;
+      let game2;
+      let tried = 0;
+      let win = 0;
+      let gameCounter = 1;
+      let card1;
+
+    for (let i=0; i<=7; i++){ 
+        //a. Flip cards    
+        let allCards = cardSelect[i];
+        allCards.addEventListener( "click", flipGame);
+          
+          function flipGame() {
+          allCards.classList.toggle("is-flipped"); 
+          let cardSelected1 = allCards.childNodes;
+      
+      
+          // b. get geeky webdev messages
+          let infoArray = Array.from(webDev_Definition.information); 
+          let geekySpeaks= document.querySelector('.contentBackground'); 
+      
+          // **Necesito conseguir una manera de sincronizar la carta clickeada con la info de infoArray**
+          geekySpeaks.textContent= infoArray[i].info;
+            
+          
+        // c. Compare cards: first game
+        if (gameCounter == 1){
+          card1 = allCards;
+          game1 = cardSelected1[3].lastChild.textContent;
+          console.log("la jugada uno es:" + game1);
+          gameCounter++;
+        }
+      
+        // d. Compare cards: second game
+        else if (gameCounter == 2){
+          game2 = cardSelected1[3].lastChild.textContent;
+          console.log("la jugada 2 es:" + game2);
+          gameCounter++;
+              if (game1 != game2){
+                  console.log("son distintas");
+                  setTimeout(() => { allCards.classList.toggle("is-flipped"), card1.classList.toggle("is-flipped");  }, 800);
+                  gameCounter = 1;
+                  tried++;   
+              }
+      
+               else if (game1 == game2){
+                  gameCounter = 1;
+                  win++;
+                  tried++;
+                  console.log(win);
+      
+                      // Victory
+                    if (win == 4){
+                        setTimeout(victoryPage, 1500); 
+                      
+                          function victoryPage(){
+                                document.getElementById('gamePage').style.display='none';
+                                document.getElementById('victoryPage').style.display='block';
+                                resetScore();
+                               
+                          }
+                    
+                      }
+                 }
+           
+          } 
+
+          // 5.Restart button- gamePage location
+          let shuffleBtn= document.getElementById('restartGame');
+          shuffleBtn.addEventListener('click', shuffleAgain);
+          
+          function resetScore(){
+            win=0;
+            tried=0;
+            document.getElementById('tried').innerHTML='INTENTOS:'+' '+tried;
+            return;
+          }
+
+          function shuffleAgain(){
+              fisherRestart();
+              resetScore();
+          
+            }
+
+        
+        // Score counter
+              document.getElementById('tried').innerHTML='INTENTOS:'+' '+tried;
+              if (tried<10){
+                document.getElementById('resultsVP').innerHTML= 'Terminaste el juego en '+' '+tried+' '+'intentos,'+' '+ 'Eres super geeky';
+              }       
+              else if (tried >10 && tried<20){
+                document.getElementById('resultsVP').innerHTML= 'Terminaste el juego en '+' '+tried+' '+'intentos,'+' '+ 'Estas empezando tu camino geeky';
+              }
+              else if (tried>20){
+                  document.getElementById('resultsVP').innerHTML= 'Terminaste el juego en '+' '+tried+' '+'intentos,'+' '+ 'Eres un geeky olvidadizo';
+              }
+       } // flipGame
+      }
+      
+  
+    
 export default fisherRestart;
