@@ -199,13 +199,11 @@ background-color:white;
 }
 
 .tried{
-    font-family: tuffybold;
-    font-size: 150%;
+    font-size: 120%;
     text-align:center;
-    line-height: 150px;
+    /*line-height: 100px;*/
     
 }
-
 
 .backBtn{
     background-color:black;

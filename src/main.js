@@ -22,15 +22,14 @@ function homePageMove(){
 const cardSelect = document.querySelectorAll(".card");
 console.log(cardSelect);
 
-
 //flip cards
 let game1;
 let game2;
-let tried = 0;
-let win = 0;
 let gameCounter = 1;
 let card1;
-
+var tried = 0;
+var win = 0;
+    
 for (let i=0; i<=7; i++){ 
     //a. Flip cards    
     let allCards = cardSelect[i];
@@ -39,7 +38,7 @@ for (let i=0; i<=7; i++){
     console.log(allCards);
     let cardSelected1 = allCards.childNodes;
     console.log(cardSelected1);
-    
+   
     // b. Compare cards: first game
     if (gameCounter == 1){
         card1 = allCards;
@@ -56,7 +55,7 @@ for (let i=0; i<=7; i++){
         gameCounter++;
         if (game1 != game2){
             console.log("son distintas");
-            setTimeout(() => { allCards.classList.toggle("is-flipped"), card1.classList.toggle("is-flipped");  }, 950);
+            setTimeout(() => { allCards.classList.toggle("is-flipped"), card1.classList.toggle("is-flipped");  }, 800);
             gameCounter = 1;
             tried++;
            
@@ -88,7 +87,6 @@ for (let i=0; i<=7; i++){
         }
 })      
 }
-
 
 //2. "?"/ Instructions button and display moving (from homepage to instructions page)
 
