@@ -216,6 +216,18 @@ background-color:white;
     border-color: black;  
 }
 
+.closeGamePage {
+    background-color:black;
+    color:ivory;
+    font-family: arial;
+    font-size: 100%;
+    border-radius: 30px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black;  
+    margin-left: 700px;
+}
+
 /*Victory Page*/
 h1{
     padding-top: 10px;
@@ -325,6 +337,18 @@ h1{
     display: none;
   }
 /*end flip instructions*/  
+.closeGamePage {
+    position:relative;
+    background-color:black;
+    color:ivory;
+    font-family: arial;
+    font-size: 70%;
+    border-radius: 30px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black;  
+    margin-left: 300px;
+}
 
     .contentBackground{
         position: absolute;
