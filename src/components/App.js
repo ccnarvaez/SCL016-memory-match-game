@@ -66,12 +66,17 @@ import webDev_Definition from '../data/webdev/webDev_Definition.js';
       console.log(idName);
 
     }
-
-  };
- 
-
-
-            
-  
- 
+    //turn the cards for restart
+    const flipIt = document.querySelectorAll(".is-flipped");
+    console.log(flipIt);
+    console.log(flipIt.length);
+    if (flipIt.length != 0){
+      console.log("hay cartas dadas vuelta");
+      for (let x=0; x <= flipIt.length-1; x++){
+        console.log(flipIt[x]);
+        flipIt[x].classList.remove("is-flipped");
+        flipIt[x].classList.add("card");
+       }
+    }
+  }; 
 export default fisherRestart;

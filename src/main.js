@@ -66,47 +66,40 @@ for (let i=0; i<=7; i++){
         gameCounter++;
         if (game1 != game2){
             console.log("son distintas");
-            setTimeout(() => { allCards.classList.toggle("is-flipped"), card1.classList.toggle("is-flipped");  }, 950);
+            setTimeout(() => { allCards.classList.toggle("is-flipped"), card1.classList.toggle("is-flipped");  }, 800);
             gameCounter = 1;
             tried++;
-            
            
         }
 
-    
     // c. Same cards   
- 
             else if (game1 == game2){
                 gameCounter = 1;
                 win++;
                 tried++;
-               // console.log(win);
+                console.log(win);
 
                 //c.1. Victory
                 if (win == 4){
-                    setTimeout(victoryPage, 1500);   
+                    setTimeout(victoryPage, 1500); 
                 }
-            
-                
             }
-
     } 
-     
- // Score counter
-        
- document.getElementById('tried').innerHTML='INTENTOS:'+' '+tried;
- if (tried<10){
- document.getElementById('resultsVP').innerHTML= 'Terminaste el juego en '+' '+tried+' '+'intentos,'+' '+ 'Eres super geeky';
- }       
- else if (tried >10 && tried<20){
- document.getElementById('resultsVP').innerHTML= 'Terminaste el juego en '+' '+tried+' '+'intentos,'+' '+ 'Estas empezando tu camino geeky';
- }
- else if (tried>20){
-     document.getElementById('resultsVP').innerHTML= 'Terminaste el juego en '+' '+tried+' '+'intentos,'+' '+ 'Eres un geeky olvidadizo';
- }  
-     
+     // Score counter
+        document.getElementById('tried').innerHTML='INTENTOS:'+' '+tried;
+        if (tried<10){
+          document.getElementById('resultsVP').innerHTML= 'Terminaste el juego en '+' '+tried+' '+'intentos,'+' '+ 'Eres super geeky';
+        }       
+        else if (tried >10 && tried<20){
+          document.getElementById('resultsVP').innerHTML= 'Terminaste el juego en '+' '+tried+' '+'intentos,'+' '+ 'Estas empezando tu camino geeky';
+        }
+        else if (tried>20){
+            document.getElementById('resultsVP').innerHTML= 'Terminaste el juego en '+' '+tried+' '+'intentos,'+' '+ 'Eres un geeky olvidadizo';
+        }
 })      
 }
+
+//2. "?"/ Instructions button and display moving (from homepage to instructions page)
 
            
 //2. "?"/ Instructions button and display moving (from homepage to instructions page)
@@ -167,5 +160,4 @@ function goBackGame(){
     
     
 }
-
 
