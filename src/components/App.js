@@ -42,67 +42,68 @@ import webDev_Definition from '../data/webdev/webDev_Definition.js';
       console.log(sortedArray);
     
   
-      //CALL BACK COMPONENT FROM SORTED ARRAY
-      let callBackSorted=document.getElementsByClassName("card_face card_face--back");
+    //CALL BACK COMPONENT FROM SORTED ARRAY
+    let callBackSorted=document.getElementsByClassName("card_face card_face--back");
   
     for (let c=0; c <= 7; c++){
       callBackSorted[c].style.backgroundColor = sortedArray[c].bgColor;
       let cardsBackArray = callBackSorted[c].childNodes;
-
       let childImage= cardsBackArray[0];
       childImage.src = sortedArray[c].image;
-
-      console.log(cardsBackArray);
       let idName= cardsBackArray[1].firstChild;
       idName.textContent = sortedArray[c].id;
-      console.log(idName);
-
     }
+
     //TURN CARDS
     const flipIt = document.querySelectorAll(".is-flipped");
+    //const flipIt2 = document.querySelectorAll(".card_face--back")
     console.log(flipIt);
+    //console.log(flipIt2);
     console.log(flipIt.length);
     if (flipIt.length != 0){
       console.log("hay cartas dadas vuelta");
       for (let x=0; x <= flipIt.length-1; x++){
         console.log(flipIt[x]);
         flipIt[x].classList.remove("is-flipped");
+        flipIt[x].classList.remove("card_face--back");
         flipIt[x].classList.add("card");
        }
     }
 
   }; 
 
-  
   //flip cards
-      const cardSelect = document.querySelectorAll('.card');
       let game1;
       let game2;
       let tried = 0;
       let win = 0;
       let gameCounter = 1;
       let card1;
-
+      const cardSelect = document.querySelectorAll('.card');
+      console.log(cardSelect);
     for (let i=0; i<=7; i++){ 
-        //a. Flip cards    
+        //a. Flip cards     
         let allCards = cardSelect[i];
+        let checkClass = cardSelect[i].className;
+        console.log(checkClass);
+        //if (checkClass == "card"){
         allCards.addEventListener( "click", flipGame);
-          
+        //}  
           function flipGame() {
           allCards.classList.toggle("is-flipped"); 
           let cardSelected1 = allCards.childNodes;
       
       
           // b. get geeky webdev messages
-          let infoArray = Array.from(webDev_Definition.information); 
-          let geekySpeaks= document.querySelector('.contentBackground'); 
+          //let infoArray = Array.from(webDev_Definition.information); 
+          //let geekySpeaks= document.querySelector('.contentBackground'); 
       
           // **Necesito conseguir una manera de sincronizar la carta clickeada con la info de infoArray**
-          geekySpeaks.textContent= infoArray[i].info;
+          //geekySpeaks.textContent= infoArray[i].info;
             
           
         // c. Compare cards: first game
-        if (gameCounter == 1){
+        if (gameCounter == 1){ 
           card1 = allCards;
           game1 = cardSelected1[3].lastChild.textContent;
           console.log("la jugada uno es:" + game1);
@@ -125,7 +126,15 @@ import webDev_Definition from '../data/webdev/webDev_Definition.js';
                   gameCounter = 1;
                   win++;
                   tried++;
-                  console.log(win);
+                  const infoArray = Array.from(webDev_Definition.information);
+                  const found = infoArray.findIndex(program => program.id === game1);
+                  console.log(found);
+                  document.getElementById("text").innerHTML=infoArray[found].info;
+                  
+                  allCards.classList.toggle("card_face--back");
+                  card1.classList.toggle("card_face--back");
+                  console.log(allCards.className);
+                  console.log(card1.className);
       
                       // Victory
                     if (win == 4){
@@ -151,6 +160,7 @@ import webDev_Definition from '../data/webdev/webDev_Definition.js';
             win=0;
             tried=0;
             document.getElementById('tried').innerHTML='INTENTOS:'+' '+tried;
+            document.getElementById("text").innerHTML="Vamos otra vez!!";
             return;
           }
 
