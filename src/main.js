@@ -1,8 +1,4 @@
 
-//document.getElementById('root').appendChild(App());
-
-
-import resetScore from './components/App.js';
 import fisherRestart from './components/App.js';
 
 
