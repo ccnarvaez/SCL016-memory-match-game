@@ -188,7 +188,7 @@ background-color:white;
 .geekySpeak{
     position: relative;
     padding-top: 50px;
-    margin-left: 90px;
+    margin-left: 80px;
 }
 .geekySpeak img{
     width: 110px;
@@ -201,7 +201,6 @@ background-color:white;
 .tried{
     font-size: 120%;
     text-align:center;
-    /*line-height: 100px;*/
     
 }
 
@@ -225,7 +224,7 @@ background-color:white;
     border-width: 5px;
     border-style: solid;
     border-color: black;  
-    margin-left: 700px;
+    float: right;
 }
 
 /*Victory Page*/
@@ -281,8 +280,6 @@ h1{
 
 .whiteBackground{
     position: relative;
-    /*justify-content: center;
-    align-items: center;*/
     top:10px;
     background-color: white;
     border-radius: 10px;
@@ -292,7 +289,7 @@ h1{
 }
 
 /*movil view*/
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 480px) {
    
     .hPImgLogo img{
         width: 281px;
@@ -351,12 +348,11 @@ h1{
 }
 
     .contentBackground{
-        position: absolute;
-        background-color: white;
         margin-top: 20px;
         margin-bottom: 20px;
         margin-left: 50px;
-        width: 246px;
+        margin-right: 20px;
+        width: 68%;
         height: 96px;
         border-radius: 10px;
     }
@@ -365,6 +361,15 @@ h1{
         position: relative;
         padding-top: 50px;
         margin-left: 0px;
+    }
+
+    .geekySpeak img{
+        width: 80px;
+    }
+
+    #text{
+        padding-left: 40px;
+        font-size: 80%;
     }
 
     /*Victory Page*/
@@ -399,5 +404,75 @@ h1{
         bottom: 40px;
         width: 100px;
         height: 100px;
+    }
+}
+/*tablet view*/
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .scene {
+        width: 76px;
+        height: 101px;
+      }
+      
+      .card_face--front img{
+        width: 49px;
+      }
+      
+      .card_face--back img{ 
+        width: 59px;
+      }
+    
+      .card_face--back h1{
+        display: none;
+      }
+
+      .geekySpeak{
+        padding-top: 50px;
+        margin-left: 20px;
+    }
+
+      .contentBackground{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 40px;
+        margin-right: 20px;
+        width: 80%;
+        height: 96px;
+        border-radius: 10px;
+    }
+    #text{
+        padding-left: 80px;
+        font-size: 80%;
+    }
+
+}
+/*tablet view*/
+@media only screen and (min-width: 769px) and (max-width: 1160px) {
+    .scene {
+        width: 76px;
+        height: 101px;
+      }
+      
+      .card_face--front img{
+        width: 49px;
+      }
+      
+      .card_face--back img{ 
+        width: 59px;
+      }
+      .geekySpeak{
+        padding-top: 50px;
+        margin-left: 25px;
+    }
+    .contentBackground{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 60px;
+        margin-right: 20px;
+        width: 85%;
+        height: 96px;
+        border-radius: 10px;
+    }
+    #text{
+        padding-left: 80px;
     }
 }
