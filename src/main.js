@@ -1,5 +1,5 @@
 
-import fisherRestart from './components/App.js';
+import randomArray from './components/App.js';
 
 
 // App structure: displays and buttons
@@ -13,7 +13,7 @@ homePageBtn.addEventListener('click', homePageMove);
 function homePageMove(){
     document.getElementById('homePage').style.display='none';
     document.getElementById('gamePage').style.display='block';
-    fisherRestart();
+    randomArray();
 }
            
 //2. "?"/ Instructions button and display moving (from homepage to instructions page)
@@ -51,6 +51,6 @@ goBackGP.addEventListener('click', goBackGame)
 function goBackGame(){
     document.getElementById('victoryPage').style.display='none'; 
     document.getElementById('gamePage').style.display='block';
-    fisherRestart();
+    randomArray();
      
 }
