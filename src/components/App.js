@@ -1,25 +1,9 @@
-//
-// Para incluir los diferentes sets de cartas podemos _importar_ el archivo
-// JavasSript que contenga el `export` correspondiente...
-//
-// import pokemon from '../data/pokemon/pokemon.js';
-// console.log(pokemon);
-//
-// O alternativamente podríamos cargar el JSON de forma asíncrona usando
-// `fetch` en el momento que consideremos necesario.
-//
-// fetch('./data/pokemon/pokemon.json')
-//   .then(resp => resp.json())
-//   .then(console.log)
-//   .catch(console.error);
-//
-
-//CARDS COMPONENTS CALLBACK
-
+//CARDS COMPONENTS CALLBACK - import data from this files
 import webdev from '../data/webdev/webdev.js';
 import webDev_Definition from '../data/webdev/webDev_Definition.js';
 
 // FISHER YATES ALGORITM
+//storage data from webdevs components and create sort array with 8 items
  let inputArray = Array.from(webdev.items); 
  let sortedArray= inputArray.sort(()=> 0.5-Math.random());
  sortedArray.splice(4,6);
@@ -29,12 +13,11 @@ import webDev_Definition from '../data/webdev/webDev_Definition.js';
       sortedArray[j+4]=sortedArray[j];
     }
   
-//CALL BACK COMPONENT FROM SORTED ARRAY
+//CALL BACK COMPONENT FROM SORTED ARRAY - put it into the card face back
 function cardComponents(){   
   let callBackSorted=document.getElementsByClassName("card_face card_face--back");
   for (let c=0; c <= 7; c++){
     if (callBackSorted[c] !== undefined){ 
-
        callBackSorted[c].style.backgroundColor = sortedArray[c].bgColor;
        let cardsBackArray = callBackSorted[c].childNodes;
        let childImage= cardsBackArray[0];
@@ -45,7 +28,7 @@ function cardComponents(){
   }
 }
 
-//TURN BACK CARDS
+//TURN BACK CARDS when the game restart
   function staticCards(){
     const flipIt = document.querySelectorAll(".is-flipped");
     if (flipIt.length != 0){
@@ -56,9 +39,10 @@ function cardComponents(){
           flipIt[x].classList.add("card");
       }
     }
+    return flipIt;
   }
-  
-  function fisherRestart(){
+  //Geting random order and random array to start game
+  function randomArray(){
       let sortedArrayItem;
       let randomIndex;
       const fullArrayCounted= sortedArray.length;  
@@ -71,6 +55,7 @@ function cardComponents(){
       }
     cardComponents()
     staticCards() 
+  
   }
 
 //CARDS FLIPPED
@@ -95,6 +80,19 @@ function resetScore(){
   tried=0;
   document.getElementById('tried').innerHTML='INTENTOS:'+' '+tried;
   document.getElementById("text").innerHTML="Vamos otra vez!!";
+  return win;
+}
+
+
+//RESET BUTTON
+function restartButton()  {
+  let shuffleBtn= document.getElementById('restartGame');
+  shuffleBtn.addEventListener('click', shuffleAgain);
+
+  function shuffleAgain(){
+      randomArray();
+      resetScore();
+    }
 }
 
 // SCORE COUNTER
@@ -111,7 +109,7 @@ function scoreCounter(){
   }
 }
 
-
+//Game moves
   for (let i=0; i<=7; i++){ 
   //a. Flip cards     
   const allCards = cardSelect[i];
@@ -121,14 +119,14 @@ function scoreCounter(){
       const cardSelected1 = allCards.childNodes;
     
     
-      // c. Compare cards: first move
+      // b. Compare cards: first move
       if (gameCounter == 1){ 
         card1 = allCards;
         game1 = cardSelected1[3].lastChild.textContent;
         gameCounter++;
           }
       
-    // d. Compare cards: second move
+    // c. Compare cards: second move
     else if (gameCounter == 2){
       game2 = cardSelected1[3].lastChild.textContent;
       gameCounter++;
@@ -165,22 +163,11 @@ function scoreCounter(){
             } 
         } 
        
-       
-          // RESTART BUTTON
-          
-          let shuffleBtn= document.getElementById('restartGame');
-          shuffleBtn.addEventListener('click', shuffleAgain);
-
-          function shuffleAgain(){
-              fisherRestart();
-              resetScore();
-            }
+          restartButton();    
           sound();
           scoreCounter()
                
        })} // flipGame
       }
       
-  
-    
-export default fisherRestart;
+export default randomArray;
