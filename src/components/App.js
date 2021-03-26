@@ -4,15 +4,36 @@ import webDev_Definition from '../data/webdev/webDev_Definition.js';
 
 // FISHER YATES ALGORITM
 //storage data from webdevs components and create sort array with 8 items
- let inputArray = Array.from(webdev.items); 
+
+  let inputArray = Array.from(webdev.items); 
+  
+ // Select items in random order
  let sortedArray= inputArray.sort(()=> 0.5-Math.random());
  sortedArray.splice(4,6);
  let spliceCounted= sortedArray.length-1;
 
+//Creating array with duplicate items
     for (let j=0; j<=spliceCounted; j++){ 
       sortedArray[j+4]=sortedArray[j];
     }
   
+//Geting random order and random array to start game
+  function randomArray(){
+    let sortedArrayItem;
+    let randomIndex;
+    const fullArrayCounted= sortedArray.length;  
+
+ // random array to create cards order  
+    for (let k=0; k<fullArrayCounted; k++){
+        sortedArrayItem=sortedArray[k];
+        randomIndex=Math.floor(Math.random()*fullArrayCounted);
+        sortedArray[k]= sortedArray[randomIndex];
+        sortedArray[randomIndex]=sortedArrayItem;
+    }
+  cardComponents()
+  staticCards() 
+
+}
 //CALL BACK COMPONENT FROM SORTED ARRAY - put it into the card face back
 function cardComponents(){   
   let callBackSorted=document.getElementsByClassName("card_face card_face--back");
@@ -40,22 +61,6 @@ function cardComponents(){
       }
     }
     return flipIt;
-  }
-  //Geting random order and random array to start game
-  function randomArray(){
-      let sortedArrayItem;
-      let randomIndex;
-      const fullArrayCounted= sortedArray.length;  
-     
-      for (let k=0; k<fullArrayCounted; k++){
-          sortedArrayItem=sortedArray[k];
-          randomIndex=Math.floor(Math.random()*fullArrayCounted);
-          sortedArray[k]= sortedArray[randomIndex];
-          sortedArray[randomIndex]=sortedArrayItem;
-      }
-    cardComponents()
-    staticCards() 
-  
   }
 
 //CARDS FLIPPED
