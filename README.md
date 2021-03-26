@@ -11,14 +11,14 @@
 
 ## 1. ORGANIZACIÓN Y PLANIFICACIÓN
 
-  ### 1.2 LECTURA CONJUNTA README
-  Antes de empezar la división del trabajo, se hizo una lectura conjunta del readme, seguida de una discusión respecto a la interpretación realizada por cada una respecto a los objetivos y alcances del desarrollo de la app.
+  ### 1.2 LECTURA CONJUNTA Readme
+  Antes de empezar la división del trabajo, se hizo una lectura conjunta del Readme, seguida de una discusión respecto a la interpretación realizada por cada una respecto a los objetivos y alcances del desarrollo de la app.
 
 
   ### 1.2 DESARROLLO DE ESQUEMA CON DIVISIÓN GENERAL DEL TRABAJO
-  Dada la confusión que despierta la revisión de un bloque de información nuevo, decidimos realizar un esquema general que englobara los puntos más relevantes de la lectura previa realizada al readme. Este esquema fue la base inicial con la que se trabajó para dividir tareas en equipo.
+  Dada la confusión que despierta la revisión de un bloque de información nuevo, decidimos realizar un esquema general que englobara los puntos más relevantes de la lectura previa realizada al Readme. Este esquema fue la base inicial con la que se trabajó para dividir tareas en equipo.
 
-<img src="./readme/Primer organigrama de trabajo.jpg" width= "400px" height="400px">
+<img src="./Readme/Primer organigrama de trabajo.jpg" width= "400px" height="400px">
 
 ## 2. UX DESIGN
 
@@ -30,20 +30,20 @@
   ***
   Joven estudiante, que después de haber recibido una asignación de programación siente interés al respecto, y desea ahondar en el tema, pero en una forma entretenida. Le gustan los juegos, y pasa mucho tiempo conectada en el celular.
 
-  <img src="./readme/AntoniaRamirez.jpg" width= "400px" height="400px">
+  <img src="./Readme/AntoniaRamirez.jpg" width= "400px" height="400px">
 
 
   *ANA MARIA PEREZ
   ***
   Ana Maria es una joven recepcionista en una empresa tech, ella desea mejorar sus posibilidades de lograr un ascenso, y para ello desea conocer los términos básicos de programación. Como ella realiza un trabajo cargado de presión, necesita que la información sea presentada en forma simple.
 
-  <img src="./readme/Ana Maria Perez.jpg" width= "400px" height="400px">
+  <img src="./Readme/Ana Maria Perez.jpg" width= "400px" height="400px">
 
   #### 2.1.2 UNIFICACIÓN DEL USUARIO TIPO
   Basándonos en las características de ambos perfiles, creados en forma individual, se crea el usuario Antonia María, que es una mezcla de ellos.
   Antonia María es una joven que recién culmina sus estudios en la media, y no sabe que carrera desea cursar, por ese motivo toma un trabajo como recepcionista en una empresa tech. Luego de unos meses, comprende que necesita un trabajo que represente un mayor reto, y que, además, le permita desarrollarse en forma profesional, por eso, desea evaluar si el mundo tech, le resulta en efecto interesante, pero las obligaciones en su trabajo la dejan agotada, y no tiene las energías como para iniciar tomando un curso formal.
 
-  <img src="./readme/finalUserAntoniaMaria.jpg" width= "400px" height="400px">
+  <img src="./Readme/finalUserAntoniaMaria.jpg" width= "400px" height="400px">
 
   #### 2.1.3 SOLUCIÓN A LA NECESIDAD DEL USUARIO CREADO
 
@@ -56,11 +56,11 @@ Una vez cada uno tuvo su esquema en papel, procedimos a comparar , y a plantear 
 
 *MODELO A
 
- <img src="./readme/Prototipo1.jpg" width= "400px" height="300px">
+ <img src="./Readme/Prototipo1.jpg" width= "400px" height="300px">
 
 *MODELO B
 
- <img src="./readme/Prototipo baja fidelidad.jpg" width= "400px" height="200px">
+ <img src="./Readme/Prototipo baja fidelidad.jpg" width= "400px" height="200px">
 
 
   #### 2.2.1 Esquematizacion general
@@ -73,7 +73,7 @@ Una vez cada uno tuvo su esquema en papel, procedimos a comparar , y a plantear 
 
   * Tener una base común para desarrollo prototipo de alta fidelidad
   
-  <img src="./readme/Funcionamiento app completo.jpg" width= "400px" height="200px">
+  <img src="./Readme/Funcionamiento app completo.jpg" width= "400px" height="200px">
 
   ***
   Leyenda
@@ -151,11 +151,11 @@ Nombre: Siendo que se trata de una aplicación para personas interesadas en el m
 
 Logo: Tomando como referencia el nombre seleccionado (Geek´s memory), se diseñó logo:
 
- <img src="./readme/logo.jpg" width= "300px" height="100px">
+ <img src="./Readme/logo.jpg" width= "300px" height="100px">
 
 Mascota: Se diseñó un personaje que pudiera ser la imagen de la app ("Geeky")
 
- <img src="./readme/mascotica fondo blanco.png" width= "200px" height="200px">
+ <img src="./Readme/mascotica fondo blanco.png" width= "200px" height="200px">
 
 ## 2.4 PROTOTIPO DE ALTA FIDELIDAD
 
@@ -163,23 +163,23 @@ Se desarrollaron dos modelos, para luego someter a testeo:
 
 *MODELO A
 
- <img src="./readme/MemoryOne.jpg" width= "300px" height="200px">
+ <img src="./Readme/MemoryOne.jpg" width= "300px" height="200px">
 
 
-  <img src="./readme/MemoryTwo.jpg" width= "300px" height="200px">
+  <img src="./Readme/MemoryTwo.jpg" width= "300px" height="200px">
 
 
 ***
 *MODELO B
 
- <img src="./readme/homepage - infopage.jpg" width= "300px" height="200px">
+ <img src="./Readme/homepage - infopage.jpg" width= "300px" height="200px">
 
-  <img src="./readme/VictoryPage.jpg" width= "300px" height="200px">
+  <img src="./Readme/VictoryPage.jpg" width= "300px" height="200px">
 
 #### 2.4.1 FEEDBACK
 En base a las observaciones recibidas, se realizaron  modificaciones, resultando el diseño, en base al cual se programaría la app:
 
-<img src="./readme/Test.png" width= "300px" height="200px">
+<img src="./Readme/Test.png" width= "300px" height="200px">
 
 ## 3. DISEÑO DE DISPLAYS: HTML Y CSS
 
@@ -235,4 +235,4 @@ Luego se realizó la manipulación dinamica del DOM para que el juego funcionara
 
 Para realizar pruebas con usuarios reales, le pedimos a 3 personas que utilizaran la aplicación web, dandole como instrucción "utiliza esta página". Los resultados se muestran a continuación considerando tres criterios que se habian definido previamente para la observación.
 
-<img src="./readme/testUsabilidad.jpg" width= "500px" height="300px">
+<img src="./Readme/testUsabilidad.jpg" width= "500px" height="300px">
