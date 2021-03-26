@@ -1,6 +1,6 @@
 //CARDS COMPONENTS CALLBACK - import data from this files
 import webdev from '../data/webdev/webdev.js';
-import webDev_Definition from '../data/webdev/webDev_Definition.js';
+import webDev_Definition from '../data/webdev/webDevDefinition.js';
 
 // FISHER YATES ALGORITM
 //storage data from webdevs components and create sort array with 8 items
@@ -26,6 +26,7 @@ function cardComponents(){
        idName.textContent = sortedArray[c].id;
     }
   }
+  return
 }
 
 //TURN BACK CARDS when the game restart
@@ -39,6 +40,7 @@ function cardComponents(){
           flipIt[x].classList.add("card");
       }
     }
+  return
   }
   //Geting random order and random array to start game
   function randomArray(){
