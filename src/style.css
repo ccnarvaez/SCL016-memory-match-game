@@ -231,11 +231,15 @@ background-color:white;
 h1{
     padding-top: 10px;
     text-align: center;
-    font-size: 100%;
+    font-size: 120%;
 }
 
 .victoryGeeky{
-    width: 200px;
+    width: 300px;
+}
+
+#resultsVP{
+    padding-bottom: 20px;
 }
 
 .geekyBottom{
@@ -405,6 +409,9 @@ h1{
         width: 100px;
         height: 100px;
     }
+    #resultsVP{
+        padding-bottom: 0px;
+    }
 }
 /*tablet view*/
 @media only screen and (min-width: 481px) and (max-width: 768px) {
@@ -459,6 +466,11 @@ h1{
       .card_face--back img{ 
         width: 59px;
       }
+
+      .card_face--back h1{
+        display: none;
+      }
+      
       .geekySpeak{
         padding-top: 50px;
         margin-left: 25px;
