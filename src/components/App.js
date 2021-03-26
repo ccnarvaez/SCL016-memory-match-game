@@ -103,6 +103,7 @@ function scoreCounter(){
   else if (tried>20){
   document.getElementById('resultsVP').innerHTML= 'Terminaste el juego en '+' '+tried+' '+'intentos,'+' '+ 'Eres un geeky olvidadizo';
   }
+  return tried;
 }
 
 //Game moves
@@ -148,7 +149,7 @@ function scoreCounter(){
                   
             allCards.classList.toggle('card_face--back');
             card1.classList.toggle('card_face--back');
-      
+            
             // Victory
             if (win == 4){
               setTimeout(function(){
@@ -167,3 +168,4 @@ function scoreCounter(){
       }
       
 export default randomArray;
+
