@@ -1,6 +1,7 @@
 import resetScore from './App.js';
 import randomArray from './App.js';
 import cardComponents from './App.js';
+import arrayInformation from './App.js';
 
 
 describe('randomArray', () => {
@@ -17,9 +18,15 @@ describe('resetScore', () => {
   });
 });
 
-describe('pruebas para fihserRestart', () => {
+describe('pruebas para randomArray', () => {
   it('deberia ser una función', () => {
     expect(typeof randomArray).toBe('function');
+  });
+});
+
+describe('pruebas para randomArray', () => {
+  it('deberia ser una función', () => {
+    expect(typeof resetScore).toBe('function');
   });
 });
 
@@ -41,4 +48,19 @@ describe('win is 0', () => {
     const win = resetScore();
     expect(win) .toBe(undefined);
   });
+});
+
+describe('Matchers Arrays', () => { 
+  test('Angular existe en el array', () => {
+      expect(arrayInformation).toContain('Angular');
+  });
+  /*test('Guadalajara no existe en el array', () => {
+      expect(arrProvincias()).not.toContain('Guadalajara');
+  });
+  test('El array semana tiene 9 elementos', () => {
+      expect(arrProvincias()).toHaveLength(9);
+  });
+  test('Existe Lunes en el array semana', () => {
+      expect(arrDias()).toContain('Lunes');
+  });*/
 });
