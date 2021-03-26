@@ -1,6 +1,6 @@
 //CARDS COMPONENTS CALLBACK - import data from this files
 import webdev from '../data/webdev/webdev.js';
-import webDev_Definition from '../data/webdev/webDev_Definition.js';
+import webDev_Definition from '../data/webdev/webdevDefinition.js';
 
 // FISHER YATES ALGORITM
 //storage data from webdevs components and create sort array with 8 items
