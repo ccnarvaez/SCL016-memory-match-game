@@ -1,0 +1,478 @@
+@font-face {
+    font-family: 'tuffybold';
+    src: url('tuffy_bold_700-webfont.woff2') format('woff2'),
+         url('tuffy_bold_700-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* Cards appear animation */
+@keyframes appear {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  } /* close Cards appear animation */
+
+*{
+    margin:0%;
+    padding: 0%;
+    font-family: tuffybold;
+}
+
+/*General statements*/
+body {
+background-color:white;
+}
+
+
+.yellow{
+    background-color: #FFE607;
+    border-radius: 10px;
+    margin: 30px;
+    width: calc(100%-30px);
+    height: 100vh;
+}
+
+.purple{
+    position: relative;
+    top:20px;
+    background-color: #D094ee;
+    border-radius: 10px;
+    margin:auto;
+    width: 95%;
+    height: 93vh;
+    display: block;   
+}
+
+/*homePage*/
+.geekyBottom{
+    margin-top: 0px;
+    margin-left: 0px;
+    width: 200px;
+    height: 200px;
+}
+
+.hPImgLogo img{
+    width: 220px;
+    margin-top: 20px;
+}
+.hPImgLogo{
+    display: flex;
+    justify-content: center;
+}
+
+.hPImgGeeky img{
+    width: 230px;
+}
+
+.hPImgGeeky{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.gameBtn{
+    display: flex;
+    justify-content: center;
+}
+
+.basicBtn{
+    background-color:black;
+    color:ivory;
+    font-family: arial;
+    font-size: 250%;
+    margin-top: 20px;
+    border-radius: 30px;
+    border-width: 20px;
+    border-style: solid;
+    border-color: black;   
+}
+
+/*Game page*/
+.gameImgLogo img{
+    width: 200px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.cardsBackground{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #0B0B0B;
+    width: 100%;
+    height: 260px;
+}
+
+/*Flip instructions*/
+/*3D container to move cards*/
+.scene {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    width: 126px;
+    height: 151px;
+    perspective: 600px;
+  }
+  
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    animation-name: appear;
+    animation-duration: 1s;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+  }
+
+  .card_face {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .card_face--front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D094ee;
+    border: 1px solid black;
+    border-radius: 15px;
+  }
+  .card_face--front img{
+    width: 59px;
+  }
+  
+  .card_face--back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFE607;
+    border: 1px solid black;
+    border-radius: 15px;
+    transform: rotateY( 180deg );
+  }
+  .card_face--back img{
+    position: relative;  
+    width: 69px;
+  }
+
+  .card_face--back h1{
+      position: relative;
+      top: 50px;
+  }
+
+  .card.is-flipped {
+    transform: rotateY(180deg);
+  }
+/*end flip instructions*/  
+
+.contentBackground{
+    position: absolute;
+    background-color: white;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 150px;
+    width: 80%;
+    height: 76px;
+    border-radius: 10px;
+}
+
+.geekySpeak{
+    position: relative;
+    padding-top: 50px;
+    margin-left: 80px;
+}
+.geekySpeak img{
+    width: 110px;
+}
+
+#text{
+    padding-left: 50px;
+}
+
+.tried{
+    font-size: 120%;
+    text-align:center;
+    
+}
+
+.backBtn{
+    background-color:black;
+    color:ivory;
+    font-family: arial;
+    font-size: 150%;
+    border-radius: 30px;
+    border-width: 20px;
+    border-style: solid;
+    border-color: black;  
+}
+
+.closeGamePage {
+    background-color:black;
+    color:ivory;
+    font-family: arial;
+    font-size: 100%;
+    border-radius: 30px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black;  
+    float: right;
+}
+
+/*Victory Page*/
+h1{
+    padding-top: 10px;
+    text-align: center;
+    font-size: 100%;
+}
+
+.victoryGeeky{
+    width: 200px;
+}
+
+.geekyBottom{
+    position: relative;
+    left: 10px;
+    bottom: 80px;
+    width: 80px;
+    height: 80px;
+}
+
+.instructionsBtn{
+    background-color:black;
+    color: white;
+    font-family: arial;
+    font-size: 100%;
+    margin-left: 75%;
+    border-radius: 30px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: black;   
+}
+
+.instructionsPage{
+    font-size: 100%;
+    text-align: center;
+}
+
+.instructionsStyle{
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.instructionsStyle h2{
+    padding-top: 40px;
+    font-size: 100%;
+}
+.instructionsStyle img{
+        float:left;
+        height: 100px;
+        width: 100px;
+}
+
+.whiteBackground{
+    position: relative;
+    top:10px;
+    background-color: white;
+    border-radius: 10px;
+    margin:auto;
+    width: 90%;
+    height: 80vh;
+}
+
+/*movil view*/
+@media only screen and (max-width: 480px) {
+   
+    .hPImgLogo img{
+        width: 281px;
+        height: 115px;
+        margin-top: 41px;
+    }
+    .hPImgGeeky img{
+        width: 250px;
+        margin-top: 80px;
+    }
+    .gameBtn{
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .cardsBackground{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        background-color: #0B0B0B;
+        width: 100%;
+        height: 413px;
+    }
+
+    /*Flip instructions*/
+/*3D container to move cards*/
+.scene {
+    width: 76px;
+    height: 101px;
+  }
+  
+  .card_face--front img{
+    width: 49px;
+  }
+  
+  .card_face--back img{ 
+    width: 59px;
+  }
+
+  .card_face--back h1{
+    display: none;
+  }
+/*end flip instructions*/  
+.closeGamePage {
+    position:relative;
+    background-color:black;
+    color:ivory;
+    font-family: arial;
+    font-size: 70%;
+    border-radius: 30px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black;  
+    margin-left: 300px;
+}
+
+    .contentBackground{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 50px;
+        margin-right: 20px;
+        width: 68%;
+        height: 96px;
+        border-radius: 10px;
+    }
+
+    .geekySpeak{
+        position: relative;
+        padding-top: 50px;
+        margin-left: 0px;
+    }
+
+    .geekySpeak img{
+        width: 80px;
+    }
+
+    #text{
+        padding-left: 40px;
+        font-size: 80%;
+    }
+
+    /*Victory Page*/
+    h1{
+        padding-top: 10px;
+        text-align: center;
+        font-size: 120%;
+    }
+
+    .victoryGeeky{
+        width: 300px;
+    }
+
+    .instructionsStyle{
+        display: inline-flex;
+
+    }
+    
+    .instructionsStyle h2{
+        padding-top: 40px;
+        font-size: 90%;
+    }
+    .instructionsStyle img{
+            float:left;
+            height: 100px;
+            width: 100px;
+    }
+    .geekyBottom{
+        position: relative;
+        top: 20px;
+        left: 10px;
+        bottom: 40px;
+        width: 100px;
+        height: 100px;
+    }
+}
+/*tablet view*/
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .scene {
+        width: 76px;
+        height: 101px;
+      }
+      
+      .card_face--front img{
+        width: 49px;
+      }
+      
+      .card_face--back img{ 
+        width: 59px;
+      }
+    
+      .card_face--back h1{
+        display: none;
+      }
+
+      .geekySpeak{
+        padding-top: 50px;
+        margin-left: 20px;
+    }
+
+      .contentBackground{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 40px;
+        margin-right: 20px;
+        width: 80%;
+        height: 96px;
+        border-radius: 10px;
+    }
+    #text{
+        padding-left: 80px;
+        font-size: 80%;
+    }
+
+}
+/*tablet view*/
+@media only screen and (min-width: 769px) and (max-width: 1160px) {
+    .scene {
+        width: 76px;
+        height: 101px;
+      }
+      
+      .card_face--front img{
+        width: 49px;
+      }
+      
+      .card_face--back img{ 
+        width: 59px;
+      }
+      .geekySpeak{
+        padding-top: 50px;
+        margin-left: 25px;
+    }
+    .contentBackground{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 60px;
+        margin-right: 20px;
+        width: 85%;
+        height: 96px;
+        border-radius: 10px;
+    }
+    #text{
+        padding-left: 80px;
+    }
+}

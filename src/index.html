@@ -2,13 +2,182 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Memory Match</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geek's memory</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <h1>Esto es una prueba</h1>
-    <p>aprendiendo GitHub</p>
+<div class="yellow">
+<!--Home page-->
+     <section id="homePage">
+     <div class="purple">
+          <div class="hPImgLogo">
+              <img src="logoModif2.png">
+          </div>
+          <div class="hPImgGeeky">
+              <img src="geekyHomePage.png">
+          </div>
+          <div class="gameBtn">
+               <button type="button" id="homePageBtn" class="basicBtn"> Jugar </button>
+          </div>
+               <button type="button" id="instructionsBtn" class="instructionsBtn"> ? </button>
+     </div><!--Este es del purple-->
+     </section>
+
+<!--Game page-->
+     <section hidden id="gamePage"> 
+        <button type="button" id="closeGamePage" class="closeGamePage">X</button>
+        <div class="gameImgLogo";>
+            <img src="logoModif2.png">
+            
+        </div>
+        <div id="tried" class="tried">Probemos tu memoria</div>
+        
+        <div class= "cardsBackground">
+            
+            <!--card 1-->
+            <audio id="audio" src="buttonClick.mp3" autoplay> </audio>
+            <div class="scene">
+                <div id="1" class="card">
+                    <div class="card_face card_face--front">
+                    <img src= "Geeky.png">
+                    </div>
+                    <div class="card_face card_face--back"><img src = " "><h1>hola</h1></div>
+                </div>
+            </div>
+            <!--card 2-->
+            <div class="scene">
+                <div id="2" class="card">
+                    <div class="card_face card_face--front">
+                    <img src= "Geeky.png">
+                    </div>
+                    <div class="card_face card_face--back"><img src = " "><h1>hola</h1></div>
+                </div>
+            </div>
+            <!--card 3-->
+            <div class="scene">
+            
+                <div id="3" class="card">
+                    <div class="card_face card_face--front">
+                    <img src= "Geeky.png">
+                    </div>
+                    <div class="card_face card_face--back"><img src = " "><h1>hola</h1></div>
+                </div>
+            </div>
+            <!--card 4-->
+            <div class="scene">
+                <div id="4" class="card">
+                    <div class="card_face card_face--front">
+                    <img src= "Geeky.png">
+                    </div>
+                    <div class="card_face card_face--back"><img src = " "><h1>hola</h1></div>
+                </div>
+            </div>
+             <!--card 5-->
+             <div class="scene">
+                <div id="5" class="card">
+                    <div class="card_face card_face--front">
+                    <img src= "Geeky.png">
+                    </div>
+                    <div class="card_face card_face--back"><img src = " "><h1>hola</h1></div>
+                </div>
+            </div>
+             <!--card 6-->
+             <div class="scene">
+                <div id="6" class="card">
+                    <div class="card_face card_face--front">
+                    <img src= "Geeky.png">
+                    </div>
+                    <div class="card_face card_face--back"><img src = " "><h1>hola</h1></div>
+                </div>  
+            </div> 
+            <!--card 7-->
+            <div class="scene">
+                <div id="7" class="card">
+                    <div class="card_face card_face--front">
+                    <img src= "Geeky.png">
+                    </div>
+                    <div class="card_face card_face--back"><img src = " "><h1>hola</h1></div>
+                </div>  
+            </div> 
+            <!--card 8-->
+            <div class="scene">
+                <div id="8" class="card">
+                    <div class="card_face card_face--front">
+                    <img src= "Geeky.png">
+                    </div>
+                    <div class="card_face card_face--back"><img src = " "><h1>hola</h1></div>
+                </div>  
+            </div> 
+        
+        </div>   
+        
+        
+        <div class= "contentBackground">
+            <p id="text">Descubre lo que te puedo contar!!</p>
+        </div> 
+       
+    
+        <div class="geekySpeak">
+            <img src="Geeky.png">
+        </div>
+            <div class="gameBtn">
+            <button type="button" id="restartGame" class="backBtn">Reiniciar</button>
+            
+            </div>   
+            
+            
+           
+     </section>
+
+<!--Instructions page-->
+     <section hidden id="instructionsPage"> 
+        <div class="gameImgLogo";>
+            <img src="logoModif2.png">
+        </div>
+     <div class="whiteBackground">
+              <h1>Hola soy "Geeky" y necesito tu ayuda para aprender:</h1>
+        <article class="instructionsStyle">
+            <img src="instruccion1.png">
+            <h2>1. Selecciona dos cartas</h2> 
+        </article>
+        <article class="instructionsStyle">
+            <img src="instruccion2.png">
+            <h2>2. Si las cartas hacen match, anotas un punto</h2> 
+        </article>
+        <article class="instructionsStyle">
+            <img src="instruccion3.png">
+            <h2>3. Lee la informacion que te muestro</h2> 
+        </article>
+         <div class="gameBtn">
+            <button type="button" id="closeInstructions" class="backBtn">Volver</button>
+         </div> 
+            <img class="geekyBottom" src="Geeky.png">
+    </section>
+
+<!--Victory Page-->
+     <section hidden id="victoryPage">
+        <div class="gameImgLogo";>
+            <img src="logoModif2.png">
+        </div>
+     <div class="whiteBackground">
+            <h1>Felicidades!!!</h1>
+            <h1> Has desbloqueado una carta de victoria</h1>   
+            <div class="gameBtn">
+                <img class="victoryGeeky" src="Carta-victoria-cut.png">
+            </div> 
+            <div id="resultsVP" class="tried"></div>
+                    
+            <div class="gameBtn">
+                <button id="VictoryGoBack" class="backBtn"> Volver</button>
+            </div>
+        </div>
+        </div>
+            
+     </div>
+     </section>
+</div> <!--este es el del div yellow-->
+
     <script src="main.js" type="module"></script>
   </body>
 </html>
