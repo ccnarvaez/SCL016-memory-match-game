@@ -4,7 +4,9 @@
 
 * [1. Organizacion y planificación](#1-Organización_y_planificacion)
 * [2. UX](#2-UX)
-* [3. DISEÑO DE DISPLAYS: Html y CSS](#3-DISEÑO_DE_DISPLAYS_Html_CSS)
+* [3. Diseño de displays: Html y CSS](#3-DISEÑO_DE_DISPLAYS_Html_CSS)
+* [4. Código en Javascript](#4-Código_en_Javascript)
+* [5. Test de usabilidad](#5-Test_de_usabilidad)
 
 
 ***
@@ -82,13 +84,23 @@ Una vez cada uno tuvo su esquema en papel, procedimos a comparar , y a plantear 
   * Cuadro naranja: display secundario (elemento que enriquece el diseño de la app, pero cuya presencia no es vital para la funcionalidad de la app)
   * Circulo azul: Botones secundarios
 
-### 2.3 ELEMENTOS CARACTERÍSCOS DE LA APP
+## 2.3 ELEMENTOS CARACTERÍSCOS DE LA APP
 A fin de caracterizar la app, se diseñó un logo con el nombre, y se seleccionó una mascosta que guiara al jugador durante el desarrollo de la partida.
 
-#### 2.3.1 Historias de usuario
+Nombre: Siendo que se trata de una aplicación para personas interesadas en el mundo de la tecnología, se tomaron en consideración nombres que pudieran ser asociados con esta temática.
+
+Logo: Tomando como referencia el nombre seleccionado (Geek´s memory), se diseñó logo:
+
+ <img src="./Readme/logo.jpg" width= "300px" height="100px">
+
+Mascota: Se diseñó un personaje que pudiera ser la imagen de la app ("Geeky")
+
+ <img src="./Readme/mascotica fondo blanco.png" width= "200px" height="200px">
+
+## 2.3.1 Historias de usuario
 A fin de generar un diseño que estuviera adaptado a las necesidades del usuario, se trabajó en base a "historias de usuario", las cuales, además de ayudarnos a definir la app por etapas, también nos permitieron ocupar la "perspectiva del usuario", pensando en la aplicación de una manera más funcional que práctica.
 
-#### Primera historia de usuario: "Necesito entender cómo funciona el juego"
+### Primera historia de usuario: "Necesito entender cómo funciona el juego"
       * Solución: Crear display con instrucciones y un botón que permita acceder a él
       * Criterios mínimos de aceptación: Que al hacer click en el botón se muestre cuadro emergente con texto de instrucciones.
        * Product Backlog: 
@@ -116,16 +128,26 @@ A fin de generar un diseño que estuviera adaptado a las necesidades del usuario
       * Solución: Cuadro de texto breve con definición de la imagen que se muestra en la carta
       * Criterios mínimos de aceptación: Que se muestre un imput type text con la información requerida
        * Product Backlog: 
+           a. Crear objeto con las propiedades "id" e "info" (conceptos).
+           b. Importar objeto al archivo App.js
+           c. Llamar info, y ubicar en div de texto, ubicado en la parte inferior del display "gamePage".
+           d. Hacer que la información mostrada sea consistente con las cartas que hacen match.
 
 #### Cuarta historia de usuario: "Quiero saber si se cumple el objetivo (si gané)"
       * Solución: Display que muestre carta y mensaje de victoria cuando se haga match con todas las cartas
       * Criterios mínimos de aceptación: Que se muestre mensaje de victoria
-       * Product Backlog: 
+       * Product Backlog:
+          a. Crear display "VictoryPage"
+          b. Crear  contador de intentos/ contador de matchs
+          c. Mostrar mensaje de victoria 
 
 #### Quinta historia de usuario: "Quiero volver a jugar repetidas veces"
       * Solución: Incluir botón "reset" que active algoritmo de fisher-yates, y retorne a la página de juego.
       * Criterios mínimos de aceptación: Que el botón reset genere un nuevo orden de cartas
        * Product Backlog: 
+          a. Crear botón "reiniciar" en gamePage
+          b. Crear función que active mecanismo de orden aleatorio y enlazar a través de un evento a diicho botón.
+         
 
 #### Metodología de trabajo
 Como herramienta visual para desarrollar las historias, y para organizar tareas y flujo de trabajo, implementamos el uso de un tablero TRELLO, siguiendo la siguiente estructura de trabajo:
@@ -145,18 +167,6 @@ Como herramienta visual para desarrollar las historias, y para organizar tareas 
 
 
 
-## 2.3.2 Selección del nombre/ creación del logo
-
-Nombre: Siendo que se trata de una aplicación para personas interesadas en el mundo de la tecnología, se tomaron en consideración nombres que pudieran ser asociados con esta temática.
-
-Logo: Tomando como referencia el nombre seleccionado (Geek´s memory), se diseñó logo:
-
- <img src="./Readme/logo.jpg" width= "300px" height="100px">
-
-Mascota: Se diseñó un personaje que pudiera ser la imagen de la app ("Geeky")
-
- <img src="./Readme/mascotica fondo blanco.png" width= "200px" height="200px">
-
 ## 2.4 PROTOTIPO DE ALTA FIDELIDAD
 
 Se desarrollaron dos modelos, para luego someter a testeo:
@@ -172,7 +182,7 @@ Se desarrollaron dos modelos, para luego someter a testeo:
 ***
 *MODELO B
 
- <img src="./Readme/homepage - infopage.jpg" width= "300px" height="200px">
+ <img src="./Readme/homepageInfopage.jpg" width= "300px" height="200px">
 
   <img src="./Readme/VictoryPage.jpg" width= "300px" height="200px">
 
@@ -181,7 +191,7 @@ En base a las observaciones recibidas, se realizaron  modificaciones, resultando
 
 <img src="./Readme/Test.png" width= "300px" height="200px">
 
-## 3. DISEÑO DE DISPLAYS: HTML Y CSS
+## 3. Diseño de displays: Html y CSS
 
 ### 3.1 HTML
 En el archivo Html se estructuraron en secciones todas las vistas del usuario con sus respectivas id que permite a traves de JavaScript mostrar u ocultar cada una, estas son: Home Page, Game Page, Instructions Page y Victory Page.
@@ -222,14 +232,46 @@ Para poder voltear las cartas se hizo una adaptación del efecto flip, documenta
 Esto utiliza funciones 3D (transition: transform 1s;
   transform-style: preserve-3d;) y rotación en el eje Y (transform: rotateY(180deg)) para generar el efecto deseado. Lo que nos permite que cuando el usuario haga click se voltee la carta que desea y posteriormente pasa a un ciclo condicional en donde, si las cartas coinciden se quedan volteadas, sino, se ocultan nuevamente para que el usuario siga descubriendolas.
 
-## 4. JavaScript
+## 4. Código en JavaScript
 La estructura de nuestra app se basa en la ejecución de procedimientos gatillados con el evento click. 
 
-Cargamos los datos desde el archivo webdev.js y webdevDefinition.js. 
+### Importación de archivos:
+  * Llamamos los datos (metodo import) desde el archivo webdev.js (obtuvimos propiedades id, imagen y background) y webdevDefinition.js (información conceptual).
+  * El archivo webdevDefinition.js, fue creado ante la necesidad de añadir información detallada para cumplir con la historia de usuario número 3.
 
-Generamos un nuevo objeto que contiene la información para las 8 cartas que forman parte del juego y cuyas propiedades son mezcladas antes de mostrarlas. 
+### Array de Objetos:
+ * Partiendo de la informacion base del archivo da data webDev, se obtuvo un nuevo array de objetos, usando el método "Array.from" (inputArray), de ese array se toman en forma aleatoria 4 elementos, los cuales después de ser duplicados (para obtener elementos por dupla para hacer el match), dan como resultado el sortedArray, que fue nuestro arreglo base en la ejecución del juego.
 
-Luego se realizó la manipulación dinamica del DOM para que el juego funcionara y por una serie de ciclos for y condicionales if revisamos si las cartas van coincidiendo, muestra la definición de cada elemento webdev descubierto y al completar 4 aciertos envia a la página de victoria, en el proceso marca tambien los intentos.
+ * Este nuevo array de objetos (sortedArray), contiene la información para las 8 cartas que forman parte del juego y cuyas propiedades son mezcladas antes de mostrarlas. 
+
+### Orden Aleatorio: 
+* El orden aleatorio ofrece una sensación de azar, y aunque no existe un método que ofrezca un resultado aleatorio absoluto, existen técnicas para ofrecer la sensación de "aleatoriedad".
+
+* En este proyecto, nos basamos en el algoritmo de fisher- Yates para alcanzar orden al azar.
+
+* Su ejecución se encuentra condensada dentro de la función randomArray(), la cual engloba el mecanismo de azar del juego.
+
+* Finalmente, a través de manipulación de delementos del DOM, se hizo la llamada respectiva de estos datos, para la creación de elementos (cartas.)
+
+### Manipulación dinámica del DOM: 
+
+Creación de cartas:
+*  La estructura básica de las cartas se encuentra en HTML, y consta de una serie de "div", los cuales mediante la manipulación desde CSS y JS, se transforman en los elementos visuales y dinámicos, que constituyen las cartas.
+
+* En un sentido práctico, se puede decir que las cartas operan como "botones", y que a través del evento "click" desencadenan los métodos requeridos para dar funcionalidad al juego.
+
+Validación de jugadas:
+
+* Cada juego está conformado por un set de 8 jugadas, donde, cada match está constituído por dos jugadas que acierten cartas iguales.
+
+* Considerando esto, el match es almacenado en un contador "win", el cual, al llegar a la suma de 4 aciertos te lleva a la pantalla de victoria.
+
+* El acierto de dos jugadas muestra la definición de cada elemento webdev descubierto. 
+
+* La manipulación dinamica del DOM en el juego, permitió su funcionamiento por una serie de ciclos for y condicionales if, y son estas herramientas de control de flujo, las que revisan si las cartas van coincidiendo.
+
+
+*  Para ofrecer un puntaje al jugador, e incrementar el atractivo del juego, se generó otro contador (tried) que se encarga de almacenar la cantidad de clicks que el jugador realiza para hacer match a todas las cartas.
 
 ## 5. Test de Usabilidad
 
