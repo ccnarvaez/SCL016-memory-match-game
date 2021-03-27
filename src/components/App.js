@@ -4,10 +4,7 @@ import webDev_Definition from '../data/webdev/webdevDefinition.js';
 
 // FISHER YATES ALGORITM
 //storage data from webdevs components and create sort array with 8 items
-
-  let inputArray = Array.from(webdev.items); 
-  
- // Select items in random order
+ let inputArray = Array.from(webdev.items); 
  let sortedArray= inputArray.sort(()=> 0.5-Math.random());
  sortedArray.splice(4,6);
  let spliceCounted= sortedArray.length-1;
@@ -17,23 +14,6 @@ import webDev_Definition from '../data/webdev/webdevDefinition.js';
       sortedArray[j+4]=sortedArray[j];
     }
   
-//Geting random order and random array to start game
-  function randomArray(){
-    let sortedArrayItem;
-    let randomIndex;
-    const fullArrayCounted= sortedArray.length;  
-
- // random array to create cards order  
-    for (let k=0; k<fullArrayCounted; k++){
-        sortedArrayItem=sortedArray[k];
-        randomIndex=Math.floor(Math.random()*fullArrayCounted);
-        sortedArray[k]= sortedArray[randomIndex];
-        sortedArray[randomIndex]=sortedArrayItem;
-    }
-  cardComponents()
-  staticCards() 
-
-}
 //CALL BACK COMPONENT FROM SORTED ARRAY - put it into the card face back
 function cardComponents(){   
   let callBackSorted=document.getElementsByClassName("card_face card_face--back");
@@ -47,6 +27,7 @@ function cardComponents(){
        idName.textContent = sortedArray[c].id;
     }
   }
+  return
 }
 
 //TURN BACK CARDS when the game restart
@@ -60,7 +41,22 @@ function cardComponents(){
           flipIt[x].classList.add("card");
       }
     }
-    return flipIt;
+  return
+  }
+  //Geting random order and random array to start game
+  function randomArray(){
+      let sortedArrayItem;
+      let randomIndex;
+      const fullArrayCounted= sortedArray.length;  
+     
+      for (let k=0; k<fullArrayCounted; k++){
+          sortedArrayItem=sortedArray[k];
+          randomIndex=Math.floor(Math.random()*fullArrayCounted);
+          sortedArray[k]= sortedArray[randomIndex];
+          sortedArray[randomIndex]=sortedArrayItem;
+      }
+    cardComponents()
+    staticCards() 
   }
 
 //CARDS FLIPPED
@@ -85,9 +81,7 @@ function resetScore(){
   tried=0;
   document.getElementById('tried').innerHTML='INTENTOS:'+' '+tried;
   document.getElementById("text").innerHTML="Vamos otra vez!!";
-  return win;
 }
-
 
 //RESET BUTTON
 function restartButton()  {
@@ -112,6 +106,7 @@ function scoreCounter(){
   else if (tried>20){
   document.getElementById('resultsVP').innerHTML= 'Terminaste el juego en '+' '+tried+' '+'intentos,'+' '+ 'Eres un geeky olvidadizo';
   }
+  return tried;
 }
 
 //Game moves
@@ -157,7 +152,7 @@ function scoreCounter(){
                   
             allCards.classList.toggle('card_face--back');
             card1.classList.toggle('card_face--back');
-      
+            
             // Victory
             if (win == 4){
               setTimeout(function(){
@@ -176,3 +171,4 @@ function scoreCounter(){
       }
       
 export default randomArray;
+
