@@ -43,6 +43,7 @@ function cardComponents(){
     }
   return
   }
+
   //Geting random order and random array to start game
   function randomArray(){
       let sortedArrayItem;
@@ -165,10 +166,12 @@ function scoreCounter(){
        
           restartButton();    
           sound();
-          scoreCounter()
+          scoreCounter();
                
        })} // flipGame
       }
-      
+
 export default randomArray;
+
+
 

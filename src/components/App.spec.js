@@ -1,19 +1,17 @@
 import resetScore from './App.js';
 import randomArray from './App.js';
 import cardComponents from './App.js';
-import arrayInformation from './App.js';
-
+import infoArray from './App.js';
+import webdev_Definition from './App.js';
 
 describe('randomArray', () => {
   it('should render without crashing', () => {
-    //const sortedArray= randomArray();
     expect(randomArray).not.toThrow('error');
   });
 });
 
 describe('resetScore', () => {
   it('should render without crashing', () => {
-    //const sortedArray= randomArray();
     expect(resetScore).not.toThrow('error');
   });
 });
@@ -37,32 +35,11 @@ describe('cardComponents', () => {
   });
 });
 
-describe('randomArray', () => {
-  it('debería ser un array', () => {
-    expect(typeof sortedArray).toBe('array');
-  });
-});
-
 describe('win is 0', () => {
   it('should render without crashing', () => {
     const win = resetScore();
     expect(win) .toBe(undefined);
   });
-});
-
-describe('Matchers Arrays', () => { 
-  test('Angular existe en el array', () => {
-      expect(arrayInformation).toContain('Angular');
-  });
-  /*test('Guadalajara no existe en el array', () => {
-      expect(arrProvincias()).not.toContain('Guadalajara');
-  });
-  test('El array semana tiene 9 elementos', () => {
-      expect(arrProvincias()).toHaveLength(9);
-  });
-  test('Existe Lunes en el array semana', () => {
-      expect(arrDias()).toContain('Lunes');
-  });*/
 });
 
 describe('cardComponents typeof testing', () => {
@@ -78,10 +55,20 @@ describe('win is undefined', () => {
   });
 });
 
-describe('cardComponents', () => {
-  it('should render without crashing', () => {
-    const flipIt = cardComponents()  ;
-    expect(flipIt instanceof HTMLElement).toBe(true);
+describe('webdevDefinition', () => {
+  it('debería ser un objeto', () => {
+    expect(typeof webdev_Definition).toBe('function');
   });
 });
 
+describe('Matchers Arrays', () => { 
+  test('Angular existe en el array', () => {
+      expect(infoArray()).toContain('Angular');
+  });
+});
+
+describe('randomArray', () => {
+  it('debería ser un array', () => {
+    expect(typeof sortedArray).toBe('array');
+  });
+});
